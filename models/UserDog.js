@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Dog extends Model {}
+class UserDog extends Model {}
 
-Project.init(
+UserDog.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -14,14 +14,6 @@ Project.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    breed: {
-      type: DataTypes.STRING,
-    },
-    image: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
     happiness: {
       type: DataTypes.INTEGER,
@@ -34,10 +26,10 @@ Project.init(
         key: 'id',
       },
     },
-    item_id: {
+    dog_id: {
         type: DataTypes.INTEGER,
         references: {
-          model: 'item',
+          model: 'dog',
           key: 'id',
         },
       },
@@ -47,8 +39,8 @@ Project.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'userDog',
   }
 );
 
-module.exports = Project;
+module.exports = UserDog;

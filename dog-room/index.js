@@ -14,9 +14,10 @@ let count = 0;
 
 canvas.style.marginTop = window.innerHeight / 2 - height / 2 + "px";
 
-let currentState = "run";
+let currentState = "walkleft";
+let breed = "blackdog"
 let spriteSheet = new Image();
-spriteSheet.src = "assets/shibadog"+currentState+".png";
+spriteSheet.src = "assets/"+breed+"/"+breed+currentState+".png";
 
 const State = {
   states: {},
@@ -81,6 +82,7 @@ function frame() {
 }
 
 frame();
+
 let userChosenItems = ["table"]
 let currentItem1 = userChosenItems[0];
 make_item();
@@ -89,7 +91,7 @@ function make_item()
   itemXpos = 10;
   itemYpos = 100;
   item_image = new Image();
-  item_image.src = 'assets/item'+currentItem1+'.png';
+  item_image.src = 'assets/items/item'+currentItem1+'.png';
   item_image.onload = function(){
     context.drawImage(item_image, itemXpos, itemYpos);
   }

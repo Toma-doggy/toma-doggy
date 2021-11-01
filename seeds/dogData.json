@@ -1,0 +1,20 @@
+[
+    {
+      "name": "Fluffs",
+      "breed": "Shiba-inu",
+      "image": "./assets/shibadogidle.png",
+      "happiness": 100
+    },
+    {
+        "name": "Lord Fuzzybutt",
+        "breed": "German Sheperd",
+        "image": "./assets/blackdog.png",
+        "happiness": 100
+    },
+    {
+        "name": "Fluffsalot",
+        "breed": "Husky",
+        "image": "./assets/huskydog.png",
+        "happiness": 100
+    }
+  ]
