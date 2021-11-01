@@ -8,7 +8,7 @@ const xPos = 150;
 const yPos = 100;
 const scale = 1;
 const fps = 60;
-const secondsToUpdate = .5 * fps;
+const secondsToUpdate = .3 * fps;
 let frameIndex = 0;
 let count = 0;
 
@@ -75,9 +75,22 @@ function animate(state) {
   }
 }
 function frame() {
-  context.clearRect(0, 0, width, height);
+  context.clearRect(xPos, yPos, frameWidth, frameHeight );
   animate(State.getState(currentState));
   requestAnimationFrame(frame);
 }
 
 frame();
+let userChosenItems = ["table"]
+let currentItem1 = userChosenItems[0];
+make_item();
+function make_item()
+{
+  itemXpos = 10;
+  itemYpos = 100;
+  item_image = new Image();
+  item_image.src = 'assets/item'+currentItem1+'.png';
+  item_image.onload = function(){
+    context.drawImage(item_image, itemXpos, itemYpos);
+  }
+}
