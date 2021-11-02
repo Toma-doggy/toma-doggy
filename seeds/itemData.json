@@ -1,0 +1,17 @@
+[
+    {
+      "name": "Bone Treat",
+      "description": "Super yummy bone treat that gets tails waggin!",
+      "image": ""
+    },
+    {
+        "name": "Ball of Awesome!",
+        "description": "It bounces, it flies, it must be chased!",
+        "image": ""
+    },
+    {
+        "name": "Snuggly Bed",
+        "description": "This is the most snuggly bed of all time, for when naps must happen.",
+        "image": ""
+    }
+  ]
