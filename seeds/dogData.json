@@ -2,19 +2,16 @@
     {
       "name": "Fluffs",
       "breed": "Shiba-inu",
-      "image": "./assets/shibadogidle.png",
-      "happiness": 100
+      "image": "./assets/shibadogidle.png"
     },
     {
         "name": "Lord Fuzzybutt",
         "breed": "German Sheperd",
-        "image": "./assets/blackdog.png",
-        "happiness": 100
+        "image": "./assets/blackdog.png"
     },
     {
         "name": "Fluffsalot",
         "breed": "Husky",
-        "image": "./assets/huskydog.png",
-        "happiness": 100
+        "image": "./assets/huskydog.png"
     }
   ]

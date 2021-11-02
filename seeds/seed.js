@@ -12,19 +12,15 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
+  const dogs = await Dog.bulkCreate(dogData, {
+    individualHooks: true,
+    returning: true,
+  });
+  const items = await Item.bulkCreate(itemData, {
+    individualHooks: true,
+    returning: true,
+  })
 
-  for (const dog of dogData) {
-    await Dog.create({
-      ...dog,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
-  for (const item of itemData) {
-    await Item.create({
-      ...item,
-      item_id: items[Math.floor(Math.random() * users.length)].id,
-    });
-  }
 
   process.exit(0);
 };
