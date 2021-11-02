@@ -20,8 +20,7 @@ Item.init(
     },
     image: {
       type: DataTypes.STRING,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
+      allowNull: true,
     },
   },
   {
