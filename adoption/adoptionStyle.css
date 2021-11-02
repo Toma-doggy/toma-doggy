@@ -1,0 +1,41 @@
+:root {
+    --font: 'VT323', monospace;
+    --purple: #9d8189;
+    --darkpink: #f4acb7;
+    --lightpink: #ffcad4;
+    --yellow: #ffe5d9;
+    --green: #d8e2dc;
+}
+
+* {
+    font-family: var(--font);
+    text-align: center;
+}
+
+body {
+    background-color: var(--green);
+    text-align: center;
+}
+
+button {
+    background-color: var(--purple);
+}
+nav {
+    text-align: right;
+    background-color: var(--yellow);
+}
+
+h1 {
+    font-size: 400%;
+}
+
+.card-deck {
+    text-align: center;
+}
+
+.card {
+    display: inline-block;
+    width: 20%;
+    margin: 5%;
+    background-color: var(--darkpink);
+}

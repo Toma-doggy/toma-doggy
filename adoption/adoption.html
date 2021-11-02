@@ -10,14 +10,25 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="adoptionStyle.css" />
     <title>dogs for adoption</title>
   </head>
   <body>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <img src="../assets/images/psthis.png" class="card-img-top" alt="...">
+    <nav>
+      <button><a href="index2.html">Home</a></button>
+
+      <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
+
+      <button><a href="#">About Us</a></button>
+      <button><a href="#footer">Contact Us</a></button>
+    </nav>
+    <!--This is the main header-->
+    <h1 id="title">dogs for adoption!</h1>
+  </header>
+  <main>
+    <div class="card-deck">
+          <div class="card">
+            <img src="../assets/images/shibadogimg.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">shibe</h5>
               <p class="card-text">very friend. much wow.</p>
@@ -26,9 +37,8 @@
               <button type="button" class="btn">adopt me!</button>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
+    
+          <div class="card">
             <img src="../assets/images/blackdogimg.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">german shepherd</h5>
@@ -38,9 +48,9 @@
               <button type="button" class="btn">adopt me!</button>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
+     
+        
+          <div class="card">
             <img src="../assets/images/huskydogimg.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">husky</h5>
@@ -50,8 +60,10 @@
               <button type="button" class="btn">adopt me!</button>
             </div>
           </div>
-        </div>
+        
       </div>
+
+      </main>
 
 
     <script
