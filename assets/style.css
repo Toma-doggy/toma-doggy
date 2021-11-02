@@ -52,21 +52,30 @@ main {
 .cards {
     background-color: var(--darkpink);
 }
-/* */
-
-/* */
-
-/* */
-
-/* */
-
-/* */
-
-/* */
-
-/* */
-
 /*This is the CSS for the footer */
 #footer {
     text-align: center;
 }
+/*sizes the dog images the same */
+.dog-img {
+    max-height: 359px;
+}
+
+/*THIS STARTS THE STYLING FOR THE SIGN-UP.HTML */
+
+/*This styles the card holding the sign up form*/
+.center-card {
+    margin: 2%;
+}
+/* This centers the text above the sign up form*/
+#account-text {
+    text-align: center;
+}
+
+
+
+/* */
+
+/* */
+
+/* */
