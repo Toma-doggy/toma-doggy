@@ -17,7 +17,6 @@ Dog.init(
     image: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
   },
   {
