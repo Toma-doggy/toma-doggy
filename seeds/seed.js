@@ -20,7 +20,7 @@ const seedDatabase = async () => {
     });
   }
   for (const item of itemData) {
-    await item.create({
+    await Item.create({
       ...item,
       item_id: items[Math.floor(Math.random() * users.length)].id,
     });
