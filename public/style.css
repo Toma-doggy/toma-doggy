@@ -222,3 +222,13 @@ main {
   animation: slidebg 10s linear infinite;
   box-shadow: 0 0 8px 8px var(--darkpink);
 }
+canvas {
+    display:flex;
+    padding: 0;
+    border: solid 6px #AAA;
+    border-radius: 10px;
+  }
+#petnav {
+    margin-left: 30%;
+    margin-right: 30%;
+}

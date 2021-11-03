@@ -8,14 +8,48 @@ const xPos = 150;
 const yPos = 100;
 const scale = 1;
 const fps = 60;
-const secondsToUpdate = .3 * fps;
+const secondsToUpdate = .5 * fps;
 let frameIndex = 0;
 let count = 0;
 
-canvas.style.marginTop = window.innerHeight / 2 - height / 2 + "px";
+// potty button actions
+const pottybtn = document.getElementById("pottybtn");
+pottybtn.addEventListener('click', () =>{
+   currentState = "sitright";
+   checkSource();
+ setTimeout(function() {
+    currentState = "idleright";
+    checkSource();
+    console.log(currentState);
+}, .7 * 1000);
+setTimeout(function() {
+  currentState = "happy";
+  checkSource();
+  console.log(currentState);
+}, 3.5 * 1000);
+});
 
-let currentState = "walkleft";
-let breed = "blackdog"
+// play button actions 
+const playbtn = document.getElementById("playbtn");
+playbtn.addEventListener('click', () =>{
+   currentState = "run";
+   checkSource();
+});
+// give treat button actions 
+const treatbtn = document.getElementById("treatbtn");
+treatbtn.addEventListener('click', () =>{
+   currentState = "lick";
+   checkSource();
+   setTimeout(function() {
+    currentState = "happy";
+    checkSource();
+    console.log(currentState);
+  }, 3.5 * 1000);
+});
+// canvas.style.marginTop = window.innerHeight / 2 - height / 2 + "px";
+
+let currentState = "idle";
+let breed = "shibadog"
 let spriteSheet = new Image();
 spriteSheet.src = "assets/"+breed+"/"+breed+currentState+".png";
 
@@ -96,3 +130,6 @@ function make_item()
     context.drawImage(item_image, itemXpos, itemYpos);
   }
 }
+function checkSource(){
+  spriteSheet.src = "assets/"+breed+"/"+breed+currentState+".png";
+};
