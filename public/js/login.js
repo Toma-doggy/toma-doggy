@@ -15,7 +15,7 @@ loginForm.addEventListener('submit', async (e) => {
 
         if(resp.ok){
             console.log(resp);
-            location.replace('/')
+            location.replace('/dogroom')
         } else {
             alert('YOU ENTERED THE WRONG INFORMATION')
         }
@@ -35,7 +35,7 @@ signupForm.addEventListener('submit', async (e) => {
         })
 
         if(resp.ok){
-            location.href = '/'
+            location.href = '/adoption'
         } else {
             alert('User already exists!')
         }
