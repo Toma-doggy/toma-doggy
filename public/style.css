@@ -28,20 +28,15 @@ nav {
   margin: 2%;
   text-align: right;
   background-color: var(--yellow);
-<<<<<<< HEAD
-  width: 100%;
-}
-
-nav button {
-  margin: 5px;
-  margin-top: 0;
-=======
->>>>>>> d9f1b94596aa679ee1982b9e2cba7f8520c4084e
 }
 /*changes the text color and hover effects of the nav buttons*/
 nav button a {
   text-decoration: none;
   color: white;
+}
+
+nav button a:hover {
+    color: white
 }
 nav button:hover {
   background-color: var(--darkpink);
@@ -61,6 +56,16 @@ main {
 #center {
   text-align: center;
 }
+
+.modal-content {
+    border-image: 10px url(./images/bubble.png) ;
+}
+
+.form-control:focus {
+    border-color: #973131;
+    box-shadow: 1px 1px 3px 1px grey inset;
+}
+  
 /* This is for the background of the jumbotron display*/
 .jumbo-display {
   background-color: var(--darkpink);
