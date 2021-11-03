@@ -49,7 +49,7 @@ treatbtn.addEventListener('click', () =>{
 // canvas.style.marginTop = window.innerHeight / 2 - height / 2 + "px";
 
 let currentState = "idle";
-let breed = "shibadog"
+let breed = "huskydog"
 let spriteSheet = new Image();
 spriteSheet.src = "assets/"+breed+"/"+breed+currentState+".png";
 
@@ -119,7 +119,7 @@ frame();
 
 let userChosenItems = ["table"]
 let currentItem1 = userChosenItems[0];
-make_item();
+// make_item();
 function make_item()
 {
   itemXpos = 10;

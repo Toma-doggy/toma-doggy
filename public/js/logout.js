@@ -7,6 +7,7 @@ logoutBtn.addEventListener('click', async () => {
     })
     if(response.ok){
         location.href = '/'
+        alert('You have been logged out!')
     } else {
         alert(response.statusText)
     }
