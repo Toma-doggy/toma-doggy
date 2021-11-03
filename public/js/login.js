@@ -15,13 +15,12 @@ loginForm.addEventListener('submit', async (e) => {
 
         if(resp.ok){
             console.log(resp);
-            location.replace('/profile')
+            location.replace('/')
         } else {
             alert('YOU ENTERED THE WRONG INFORMATION')
         }
     }
 });
-
 signupForm.addEventListener('submit', async (e) => {
     e.preventDefault()
     const signupEmail = document.getElementById('signupemail').value
@@ -36,7 +35,7 @@ signupForm.addEventListener('submit', async (e) => {
         })
 
         if(resp.ok){
-            location.href = '/profile'
+            location.href = '/'
         } else {
             alert('User already exists!')
         }
