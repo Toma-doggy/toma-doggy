@@ -17,9 +17,9 @@
   ## Installation 
   In order for the application to run, the following must be installed: Node.js
   ## Contributors 
-  Sami Byers
-  Marco Shifflette
-  Melyssa Dennis
+  Sami Byers,
+  Marco Shifflette,
+  Melyssa Dennis,
   Kaiya Gunsauls
   ## Tests 
   N/A
