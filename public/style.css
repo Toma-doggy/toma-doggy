@@ -1,10 +1,5 @@
-/* These are CSS variables that will be used throughout */
-
-@font-face {
-  font-family: coolFont;
-  src: url("./fonts/VT323-Regular.ttf");
-}
 :root {
+  --font: 'VT323', monospace;
   --purple: #9d8189;
   --darkpink: #f4acb7;
   --lightpink: #ffcad4;
@@ -13,9 +8,7 @@
 }
 /*This is CSS that will be applied throughout the html */
 * {
-  font-family: coolFont;
-  /* margin: 5%; */
-  /* margin-top: 0; */
+  font-family: var(--font);
 }
 /* This is for the entire body section*/
 body {
@@ -35,15 +28,8 @@ nav {
   margin: 2%;
   text-align: right;
   background-color: var(--yellow);
-  width: 100%;
 }
-
-nav button {
-  width: 8%;
-  margin: 5px;
-  margin-top: 0;
-}
-
+/*changes the text color and hover effects of the nav buttons*/
 nav button a {
   text-decoration: none;
   color: white;
@@ -69,8 +55,10 @@ main {
 /* This is for the background of the jumbotron display*/
 .jumbo-display {
   background-color: var(--darkpink);
+  margin-left: 10px;
+  margin-right: 10px;
 }
-/* */
+/* This sets the color for all the cards in the homepage and sign up area*/
 .cards {
   background-color: var(--darkpink);
 }
@@ -82,7 +70,6 @@ main {
 .dog-img {
   max-height: 359px;
 }
-
 /*THIS STARTS THE STYLING FOR THE SIGN-UP.HTML */
 
 /*This styles the card holding the sign up form*/
@@ -93,7 +80,6 @@ main {
 #account-text {
   text-align: center;
 }
-
 /* THIS IS THE CSS FOR THE DOG HOUSE HTML*/
 
 /*This sets the size for the home image in the navbar */
@@ -110,125 +96,14 @@ main {
   max-width: 150px;
   margin: 10px;
 }
-
-/* for adoption page */
-
-.card-imgs {
-  position: relative;
-}
-
-/* shibe */
-.shibe-hover-img {
-  width: 40%;
-  height: 40%;
-}
-
-.card-imgs img.shibe-hover-img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  object-fit: contain;
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.adopt-card:hover img.shibe-hover-img {
-  opacity: 1;
-}
-
-/* shep */
-.shep-hover-img {
-  width: 100%;
-  height: 100%;
-}
-
-.card-imgs img.shep-hover-img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  object-fit: contain;
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.adopt-card:hover img.shep-hover-img {
-  opacity: 1;
-}
-
-/* husky */
-.husky-hover-img {
-  width: 40%;
-  height: 40%;
-}
-
-.card-imgs img.husky-hover-img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  object-fit: contain;
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.adopt-card:hover img.husky-hover-img {
-  opacity: 1;
-}
-
-@keyframes slidebg {
-  to {
-    background-position: 20vw;
-  }
-}
-
-.adopt-container {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-}
-.adopt-deck {
-  width: 75%;
-  justify-content: space-between;
-}
-
-.adopt-card {
-  margin: 20px;
-  box-shadow: 0 0 5px 5px var(--purple);
-  background-color: var(--lightpink);
-}
-
-.adopt.btn {
-  background-color: var(--darkpink);
-  width: 100%;
-  margin: 0;
-  height: 150%;
-  padding: 0;
-}
-
-.adopt-card:hover {
-  background-image: linear-gradient(
-    90deg,
-    #fff45b 0%,
-    #ff94db 49%,
-    #9ff8ab 80%,
-    #fff45c 100%
-  );
-  animation: slidebg 10s linear infinite;
-  box-shadow: 0 0 8px 8px var(--darkpink);
-}
+/*this is for the animation stuff*/
 canvas {
-    display:flex;
-    padding: 0;
-    border: solid 6px #AAA;
-    border-radius: 10px;
-  }
+  display:flex;
+  padding: 0;
+  border: solid 6px #AAA;
+  border-radius: 10px;
+}
 #petnav {
-    margin-left: 30%;
-    margin-right: 30%;
+  margin-left: 30%;
+  margin-right: 30%;
 }
