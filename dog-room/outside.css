@@ -1,0 +1,26 @@
+/* html, body {
+    background: #d8e2dc;
+  }
+  
+  canvas {
+    background: #EEE;
+    display: block;
+    margin: 0 auto;
+    border: solid 6px #AAA;
+    border-radius: 10px;
+  } */
+body {
+  background-image: url('./assets/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+button {
+  background-color: rgb(242, 245, 63);
+  border-color: rgb(242, 245, 63);
+}
+
+#home-img {
+  max-height: 25px;
+}
