@@ -40,6 +40,11 @@
     text-align: right;
     background-color: var(--yellow);
   }
+
+  .modal {
+    width: 100%;
+    margin: 0;
+  }
   
   /* nav button {
     width: 8%;
@@ -69,6 +74,12 @@
   #center {
     text-align: center;
   }
+
+  .form-control:focus {
+    border-color: darkgray;
+    box-shadow: 1px 1px 3px 1px darkgray inset;
+}
+
   /* This is for the background of the jumbotron display*/
   .jumbo-display {
     background-color: var(--darkpink);
@@ -84,34 +95,6 @@
   /*sizes the dog images the same */
   .dog-img {
     max-height: 359px;
-  }
-  
-  /*THIS STARTS THE STYLING FOR THE SIGN-UP.HTML */
-  
-  /*This styles the card holding the sign up form*/
-  .center-card {
-    margin: 2%;
-  }
-  /* This centers the text above the sign up form*/
-  #account-text {
-    text-align: center;
-  }
-  
-  /* THIS IS THE CSS FOR THE DOG HOUSE HTML*/
-  
-  /*This sets the size for the home image in the navbar */
-  #home-img {
-    max-height: 25px;
-  }
-  /* This aligns the title in the center of the screen*/
-  #room-title {
-    text-align: center;
-  }
-  /*sets the size for the leash in the card*/
-  #leash-img {
-    max-height: 150px;
-    max-width: 150px;
-    margin: 10px;
   }
   
   /* for adoption page */
