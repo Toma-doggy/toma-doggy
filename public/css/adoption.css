@@ -11,8 +11,7 @@
   /*This is CSS that will be applied throughout the html */
   * {
     font-family: var(--font);
-    margin: 5%;
-    margin-top: 0;
+   
   }
   /* This is for the entire body section*/
   body {
@@ -28,12 +27,11 @@
     background-color: var(--yellow);
   }
   /* This is for the navbar*/
-  /* nav {
+  nav {
     margin: 2%;
     text-align: right;
     background-color: var(--yellow);
-    width: 100%;
-  } */
+  }
   /* This is for the navbar*/
   nav {
     margin: 2%;
@@ -73,6 +71,10 @@
   /* This is to center the text of the currently available breeds*/
   #center {
     text-align: center;
+  }
+
+  #home-img {
+    max-height: 25px;
   }
 
   .form-control:focus {
@@ -172,15 +174,9 @@
     }
   }
   
-  .adopt-container {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-  }
   .adopt-deck {
     width: 75%;
-    justify-content: space-between;
+    text-align: center;
   }
   
   .adopt-card {
