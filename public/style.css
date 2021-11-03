@@ -14,8 +14,8 @@
 /*This is CSS that will be applied throughout the html */
 * {
   font-family: coolFont;
-  margin: 5%;
-  margin-top: 0;
+  /* margin: 5%; */
+  /* margin-top: 0; */
 }
 /* This is for the entire body section*/
 body {
