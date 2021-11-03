@@ -1,0 +1,227 @@
+/* These are CSS variables that will be used throughout */
+
+  :root {
+    --purple: #9d8189;
+    --darkpink: #f4acb7;
+    --lightpink: #ffcad4;
+    --yellow: #ffe5d9;
+    --green: #d8e2dc;
+    --font: 'VT323', monospace;
+  }
+  /*This is CSS that will be applied throughout the html */
+  * {
+    font-family: var(--font);
+    margin: 5%;
+    margin-top: 0;
+  }
+  /* This is for the entire body section*/
+  body {
+    background-color: var(--yellow);
+  }
+  /*This is for the buttons */
+  button {
+    background-color: var(--purple);
+    color: white;
+  }
+  /* This is for the entire header section*/
+  header {
+    background-color: var(--yellow);
+  }
+  /* This is for the navbar*/
+  /* nav {
+    margin: 2%;
+    text-align: right;
+    background-color: var(--yellow);
+    width: 100%;
+  } */
+  /* This is for the navbar*/
+  nav {
+    margin: 2%;
+    text-align: right;
+    background-color: var(--yellow);
+  }
+  
+  /* nav button {
+    width: 8%;
+    margin: 5px;
+    margin-top: 0;
+  } */
+  
+  nav button a {
+    text-decoration: none;
+    color: white;
+  }
+  nav button:hover {
+    background-color: var(--darkpink);
+    color: white;
+  }
+  /* This is for the header title*/
+  #title {
+    text-align: center;
+    font-size: 400%;
+    background-color: var(--yellow);
+  }
+  /* This is for the main section*/
+  main {
+    margin: 2%;
+  }
+  /* This is to center the text of the currently available breeds*/
+  #center {
+    text-align: center;
+  }
+  /* This is for the background of the jumbotron display*/
+  .jumbo-display {
+    background-color: var(--darkpink);
+  }
+  /* */
+  .cards {
+    background-color: var(--darkpink);
+  }
+  /*This is the CSS for the footer */
+  #footer {
+    text-align: center;
+  }
+  /*sizes the dog images the same */
+  .dog-img {
+    max-height: 359px;
+  }
+  
+  /*THIS STARTS THE STYLING FOR THE SIGN-UP.HTML */
+  
+  /*This styles the card holding the sign up form*/
+  .center-card {
+    margin: 2%;
+  }
+  /* This centers the text above the sign up form*/
+  #account-text {
+    text-align: center;
+  }
+  
+  /* THIS IS THE CSS FOR THE DOG HOUSE HTML*/
+  
+  /*This sets the size for the home image in the navbar */
+  #home-img {
+    max-height: 25px;
+  }
+  /* This aligns the title in the center of the screen*/
+  #room-title {
+    text-align: center;
+  }
+  /*sets the size for the leash in the card*/
+  #leash-img {
+    max-height: 150px;
+    max-width: 150px;
+    margin: 10px;
+  }
+  
+  /* for adoption page */
+  
+  .card-imgs {
+    position: relative;
+  }
+  
+  /* shibe */
+  .shibe-hover-img {
+    width: 40%;
+    height: 40%;
+  }
+  
+  .card-imgs img.shibe-hover-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .adopt-card:hover img.shibe-hover-img {
+    opacity: 1;
+  }
+  
+  /* shep */
+  .shep-hover-img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card-imgs img.shep-hover-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .adopt-card:hover img.shep-hover-img {
+    opacity: 1;
+  }
+  
+  /* husky */
+  .husky-hover-img {
+    width: 40%;
+    height: 40%;
+  }
+  
+  .card-imgs img.husky-hover-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .adopt-card:hover img.husky-hover-img {
+    opacity: 1;
+  }
+  
+  @keyframes slidebg {
+    to {
+      background-position: 20vw;
+    }
+  }
+  
+  .adopt-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .adopt-deck {
+    width: 75%;
+    justify-content: space-between;
+  }
+  
+  .adopt-card {
+    margin: 20px;
+    box-shadow: 0 0 5px 5px var(--purple);
+    background-color: var(--lightpink);
+  }
+  
+  .adopt.btn {
+    background-color: var(--darkpink);
+    width: 100%;
+    margin: 0;
+    height: 150%;
+    padding: 0;
+  }
+  
+  .adopt-card:hover {
+    background-image: linear-gradient(
+      90deg,
+      #fff45b 0%,
+      #ff94db 49%,
+      #9ff8ab 80%,
+      #fff45c 100%
+    );
+    animation: slidebg 10s linear infinite;
+    box-shadow: 0 0 8px 8px var(--darkpink);
+  }
