@@ -88,3 +88,13 @@ main {
     max-width: 150px;
     margin: 10px;
 }
+canvas {
+    display:flex;
+    padding: 0;
+    border: solid 6px #AAA;
+    border-radius: 10px;
+  }
+#petnav {
+    margin-left: 30%;
+    margin-right: 30%;
+}
