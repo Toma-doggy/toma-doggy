@@ -21,25 +21,28 @@
         <h1 id="room-title">Placeholder's Room</h1>
     </header>
     <main>
-        <div class="card cards">
-            <div class="card-body">
+        <div class="card cards"id="petnav">
+            <div class="card-body" >
                 <p>Your pet needs care, attention, and excercise to be happy. Try choosing from the options below and see how your pet responds!</p>
-                <button><img id="home-img" src="./assets/items/bone.png"> Give Treat</button>
+                <button id="treatbtn"><img id="home-img" src="./assets/items/bone.png"> Give Treat</button>
                 <button><img id="home-img" src="./assets/items/grooming.png"> Groom</button>
                 <button><img id="home-img" src="./assets/items/pet-food.png"> Feed</button>
-                <button><img id="home-img" src="./assets/items/tennis-ball.png"> Play</button>
-                <button><img id="home-img" src="./assets/items/poop.png"> Go Potty</button>
+                <button id="playbtn"><img id="home-img" src="./assets/items/tennis-ball.png"> Play</button>
+                <button id="pottybtn"><img id="home-img" src="./assets/items/poop.png"> Go Potty</button>
             </div>
         </div>
         <br>
-        <div class="card cards" style="width: 10rem;">
-            <img src="./assets/items/leash.png" id="leash-img" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Go Outside?</h5>
-              <p class="card-text">Take your dog out for some much needed excersise! Click the button to go enjoy the great outdoors with your pet.</p>
-              <button><a href="#">Go Outside</a></button>
+        <div id="container1" style="display:flex; justify-content: center;">
+            <div class="card cards" id="gooutside" style="width: 10rem; display: flex">
+                <img src="./assets/items/leash.png" id="leash-img" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Go Outside?</h5>
+                    <p class="card-text">Take your dog out for some much needed excersise! Click the button to go enjoy the great outdoors with your pet.</p>
+                    <button><a href="#">Go Outside</a></button>
+                </div>
             </div>
-          </div>
+            <canvas id="canvas" style="background: url('./assets/background.png'); align-self: center; "></canvas>
+        </div>
     </main>
     <footer id="footer">
         <!--author attribution for using their free icons-->
@@ -47,5 +50,5 @@
         </div>
     </footer>
 </body>
-
+    <script type="text/javascript" src='index.js'></script>
 </html>
