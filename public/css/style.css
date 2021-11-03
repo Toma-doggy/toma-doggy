@@ -57,10 +57,6 @@ main {
   text-align: center;
 }
 
-.modal-content {
-    border-image: 10px url(./images/bubble.png) ;
-}
-
 .form-control:focus {
     border-color: #973131;
     box-shadow: 1px 1px 3px 1px grey inset;

@@ -74,6 +74,12 @@
   #center {
     text-align: center;
   }
+
+  .form-control:focus {
+    border-color: darkgray;
+    box-shadow: 1px 1px 3px 1px darkgray inset;
+}
+
   /* This is for the background of the jumbotron display*/
   .jumbo-display {
     background-color: var(--darkpink);
