@@ -72,10 +72,19 @@ main {
     text-align: center;
 }
 
+/* THIS IS THE CSS FOR THE DOG HOUSE HTML*/
 
-
-/* */
-
-/* */
-
-/* */
+/*This sets the size for the home image in the navbar */
+#home-img {
+    max-height: 25px;
+}
+/* This aligns the title in the center of the screen*/
+#room-title {
+    text-align: center;
+}
+/*sets the size for the leash in the card*/
+#leash-img {
+    max-height: 150px;
+    max-width: 150px;
+    margin: 10px;
+}
