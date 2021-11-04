@@ -1,9 +1,4 @@
-/* These are CSS variables that will be used throughout */
-body, html {
-  height: 100%;
-  margin: 0;
-}
-  :root {
+ :root {
     --purple: #9d8189;
     --darkpink: #f4acb7;
     --lightpink: #ffcad4;
@@ -16,9 +11,10 @@ body, html {
     font-family: var(--font);
    
   }
-
-  .bg-img {
+  body {
     background-image: url("../images/wp4735682.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   /* This is for the entire body section*/
   /*This is for the buttons */
@@ -26,34 +22,21 @@ body, html {
     background-color: var(--purple);
     color: white;
   }
-  /* This is for the entire header section*/
-  header {
-    background-color: var(--yellow);
-  }
   /* This is for the navbar*/
   nav {
     margin: 2%;
     text-align: right;
-    background-color: var(--yellow);
+    height: 60px;
   }
-  /* This is for the navbar*/
-  nav {
-    margin: 2%;
-    text-align: right;
-    background-color: var(--yellow);
+  nav button {
+    height: 80%;
   }
 
   .modal {
     width: 100%;
     margin: 0;
   }
-  
-  /* nav button {
-    width: 8%;
-    margin: 5px;
-    margin-top: 0;
-  } */
-  
+
   nav button a {
     text-decoration: none;
     color: white;
@@ -62,20 +45,28 @@ body, html {
     background-color: var(--darkpink);
     color: white;
   }
+  nav button:hover a {
+    text-decoration: none;
+    color: black;
+  }
   /* This is for the header title*/
   #title {
     text-align: center;
+    color: white;
     font-size: 400%;
-    background-color: var(--yellow);
+    text-shadow: 2px 2px var(--darkpink);
+    background-color: rgba(95, 82, 82, 0.5);
+    margin: 20%;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 3px double var(--yellow);
+    padding: 3%;
   }
   /* This is for the main section*/
   main {
     margin: 2%;
   }
-  /* This is to center the text of the currently available breeds*/
-  #center {
-    text-align: center;
-  }
+
 
   #home-img {
     max-height: 25px;
@@ -85,28 +76,13 @@ body, html {
     border-color: darkgray;
     box-shadow: 1px 1px 3px 1px darkgray inset;
 }
-
-  /* This is for the background of the jumbotron display*/
-  .jumbo-display {
-    background-color: var(--darkpink);
-  }
-  /* */
   .cards {
     background-color: var(--darkpink);
   }
-  /*This is the CSS for the footer */
-  #footer {
-    text-align: center;
-  }
+ 
   /*sizes the dog images the same */
   .dog-img {
     max-height: 359px;
-  }
-  
-  /* for adoption page */
-  
-  .card-imgs {
-    position: relative;
   }
   
   /* shibe */
@@ -179,14 +155,18 @@ body, html {
   }
   
   .adopt-deck {
-    width: 75%;
+    width: 100%;
     text-align: center;
+    padding: 10%;
+    padding-top: 2%;
   }
   
   .adopt-card {
-    margin: 20px;
-    box-shadow: 0 0 5px 5px var(--purple);
-    background-color: var(--lightpink);
+    /* margin: 20px; */
+    margin: 3%;
+    background-color: var(--darkpink);
+    color: white;
+    box-shadow: 0 0 8px 8px var(--lightpink)inset;
   }
   
   .adopt.btn {
@@ -207,4 +187,8 @@ body, html {
     );
     animation: slidebg 10s linear infinite;
     box-shadow: 0 0 8px 8px var(--darkpink);
+  }
+
+  .card-img-top {
+    height: 400px;
   }

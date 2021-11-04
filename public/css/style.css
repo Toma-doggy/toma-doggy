@@ -152,7 +152,8 @@ main {
 
 /*This styles the card holding the sign up form*/
 .center-card {
-  margin: 2%;
+  margin: 20%;
+  margin-top: 0;
 }
 /* This centers the text above the sign up form*/
 #account-text {
