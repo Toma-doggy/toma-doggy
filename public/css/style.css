@@ -145,8 +145,31 @@ main {
   border: 3px solid white;
   box-shadow: 5px 5px 5px 2px rgb(65, 65, 65) inset;
 }
-@media screen and (max-width: 600px) {
 
+@media screen and (max-width: 400px) {
+  * {
+    margin: 0;
+  }
+
+  #title {
+    font-size: 1.8rem;
+    padding: 1%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin: 2%;
+    margin-top: 8%;
+  }
+
+  .jumbo-display {
+    padding: 2%;
+    margin: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
 }
 /*THIS STARTS THE STYLING FOR THE SIGN-UP.HTML */
 
