@@ -1,19 +1,22 @@
-const nameForm = document.getElementById('name');
 
-const adoptShibe = $('#shiba-btn');
-const adoptShep = document.getElementById('shep-btn');
-const adoptHusky = document.getElementById('husky-btn');
+const shibaAdoptForm = document.getElementById('shiba-name');
 
-$('#shibeModal').on(adoptShibe.click)
+shibaAdoptForm.addEventListener('submit', async (e) => {
+    e.preventDefault()
+    const shibaDogName = document.getElementById('shiba-dog-name').value;
 
-// nameForm.addEventListener('submit', async (e) => {
-//     e.preventDefault()
-//     const dogName = document.getElementById('dog-name').value
+    if(shibaDogName){
+        const resp = await fetch('/api/userdogs', {
+            method: 'POST',
+            body: JSON.stringify({name: shibaDogName}),
+            headers: { 'Content-Type': 'application/json' }
+        })
 
-//     if(dogName){
-//         const resp = await fetch('/api/users', {
-//             method: 'POST',
-//             body: JSON.stringify({ name:dogName,})
-//         })
-//     }
-// })
+        if(resp.ok){
+            console.log(resp);
+            location.replace('/dogroom')
+        } else {
+            alert('AN ERROR HAS OCCURED PLEASE TRY AGAIN!')
+        }
+    }
+});
