@@ -1,3 +1,4 @@
+const {Dog, DogItem, Item, User, UserDog} = require('../../models');
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
 const userdogRoutes = require('./userdogRoutes')
