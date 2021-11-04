@@ -1,5 +1,8 @@
 /* These are CSS variables that will be used throughout */
-
+body, html {
+  height: 100%;
+  margin: 0;
+}
   :root {
     --purple: #9d8189;
     --darkpink: #f4acb7;
@@ -13,10 +16,11 @@
     font-family: var(--font);
    
   }
-  /* This is for the entire body section*/
-  body {
-    background-color: var(--yellow);
+
+  .bg-img {
+    background-image: url("../images/wp4735682.png");
   }
+  /* This is for the entire body section*/
   /*This is for the buttons */
   button {
     background-color: var(--purple);
