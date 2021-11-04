@@ -103,9 +103,7 @@ main {
 }
 /*sets the size for the leash in the card*/
 #leash-img {
-  max-height: 150px;
-  max-width: 150px;
-  margin: 10px;
+  max-height: 20px;
 }
 /*this is for the animation stuff*/
 canvas {
@@ -113,8 +111,26 @@ canvas {
   padding: 0;
   border: solid 6px #AAA;
   border-radius: 10px;
+  margin:2%;
 }
-#petnav {
-  margin-left: 30%;
-  margin-right: 30%;
+
+/*this styles the placement of the dog gif card*/
+#gifcard {
+  display: flex;
+  justify-content: center;
+}
+/*this is the card that holds the happiness meter*/
+#hapinesscard {
+  margin: 2%;
+}
+
+#happymeter {
+  max-height: 20px;
+  
+}
+
+#cardspacing {
+  display:flex;
+  justify-content:space-between;
+  padding: 5%;
 }
