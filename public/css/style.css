@@ -146,8 +146,31 @@ main {
   border: 3px solid white;
   box-shadow: 5px 5px 5px 2px rgb(65, 65, 65) inset;
 }
-@media screen and (max-width: 600px) {
 
+@media screen and (max-width: 400px) {
+  * {
+    margin: 0;
+  }
+
+  #title {
+    font-size: 1.8rem;
+    padding: 1%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin: 2%;
+    margin-top: 8%;
+  }
+
+  .jumbo-display {
+    padding: 2%;
+    margin: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
 }
 /*THIS STARTS THE STYLING FOR THE SIGN-UP.HTML */
 
@@ -172,9 +195,7 @@ main {
 }
 /*sets the size for the leash in the card*/
 #leash-img {
-  max-height: 150px;
-  max-width: 150px;
-  margin: 10px;
+  max-height: 20px;
 }
 /*this is for the animation stuff*/
 canvas {
@@ -182,12 +203,26 @@ canvas {
   padding: 0;
   border: solid 6px #AAA;
   border-radius: 10px;
+  margin:2%;
 }
-#petnav {
-  margin-left: 30%;
-  margin-right: 30%;
+
+/*this styles the placement of the dog gif card*/
+#gifcard {
+  display: flex;
+  justify-content: center;
 }
-#previews {
-  margin-left: 0px;
-  margin-right: 0px;
+/*this is the card that holds the happiness meter*/
+#hapinesscard {
+  margin: 2%;
+}
+
+#happymeter {
+  max-height: 20px;
+  
+}
+
+#cardspacing {
+  display:flex;
+  justify-content:space-between;
+  padding: 5%;
 }

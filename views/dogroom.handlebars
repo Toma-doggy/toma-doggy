@@ -1,34 +1,78 @@
+<header>
+    <h1 id="room-title">Placeholder's Room</h1>
+    <div class="cards" id="hapinesscard">
+        <div class="card-body" id="cardspacing">
+            <!--This is the dropdown menu for the actions-->
+            <div class="dropdown btn-group">
+                <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Actions
+                </button>
+                <ul class="dropdown-menu cards" aria-labelledby="dropdownMenuButton1">
+                    <li><button class="dropdown-item" href="#" id="treatbtn"><img id="home-img"
+                                src="./assets/items/bone.png"> Give Treat</button></li>
+                    <li><button class="dropdown-item" href="#"><img id="home-img" src="./assets/items/grooming.png">
+                            Groom</button></li>
+                    <li><button class="dropdown-item" href="#"><img id="home-img" src="./assets/items/pet-food.png">
+                            Feed</button></li>
+                    <li><button class="dropdown-item" href="#" id="playbtn"><img id="home-img"
+                                src="./assets/items/tennis-ball.png"> Play</button></li>
+                    <li><button class="dropdown-item" href="#" id="pottybtn"><img id="home-img"
+                                src="./assets/items/poop.png"> Go Potty</button></li>
+                </ul>
+            </div>
+            <!--This is the dropdown menu for the inventory-->
+            <div class="dropdown btn-group">
+                <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Inventory
+                </button>
+                <ul class="dropdown-menu cards" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#"><img id="home-img" src="/images/pet-bed (1).png"> Bed</a></li>
+                    <li><a class="dropdown-item" href="#"><img id="home-img" src="/images/dog-bowl.png"> Food Bowl</a></li>
+                    <li><a class="dropdown-item" href="#"><img id="home-img" src="/images/carpet.png"> Rug</a></li>
+                    <li><a class="dropdown-item" href="#"><img id="home-img" src="/images/floor-lamp.png"> Lamp</a></li>
+                    <li><a class="dropdown-item" href="#"><img id="home-img" src="/images/furniture (1).png"> Chair</a></li>
+                </ul>
+            </div>
+            <!--this styles the happiness meter-->
+            <h5 class="btn-group">Happiness:</h5>
+            <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
+            <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
+            <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
+            <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
+            <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
+            <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
+            <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
+            <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
 
-    <header>
-        <h1 id="room-title">{{userDogs.[0].name}}'s Room</h1>
-    </header>
-    <main>
-        <div class="card cards"id="petnav">
-            <div class="card-body" >
-                <p>Your pet needs care, attention, and excercise to be happy. Try choosing from the options below and see how your pet responds!</p>
-                <button id="treatbtn"><img id="home-img" src="./assets/items/bone.png"> Give Treat</button>
-                <button><img id="home-img" src="./assets/items/grooming.png"> Groom</button>
-                <button><img id="home-img" src="./assets/items/pet-food.png"> Feed</button>
-                <button id="playbtn"><img id="home-img" src="./assets/items/tennis-ball.png"> Play</button>
-                <button id="pottybtn"><img id="home-img" src="./assets/items/poop.png"> Go Potty</button>
-            </div>
         </div>
-        <br>
-        <div id="container1" style="display:flex; justify-content: center;">
-            <div class="card cards" id="gooutside" style="width: 10rem; display: flex">
-                <img src="./assets/items/leash.png" id="leash-img" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Go Outside?</h5>
-                    <p class="card-text">Take your dog out for some much needed excersise! Click the button to go enjoy the great outdoors with your pet.</p>
-                    <button><a href="#">Go Outside</a></button>
-                </div>
-            </div>
-            <canvas id="canvas" style=" align-self: center; "></canvas>
+    </div>
+</header>
+<main>
+    <!--this is the canvas that holds the dog animations-->
+    <div id="gifcard">
+        <canvas id="canvas" style=" align-self: center; "></canvas>
+    </div>
+    <br>
+    <!--This is the go outside card-->
+    <div>
+        <div class="card-body cards">
+
+            <h5 class="card-title">Go Outside?</h5>
+            <p class="card-text">Take your dog out for some much needed excersise! Click the button to go enjoy the
+                great
+                outdoors with your pet.</p>
+            <button><img src="./assets/items/leash.png" id="leash-img" alt="..."> Go Outside</button>
         </div>
-    </main>
-    <footer id="footer">
-        <!--author attribution for using their free icons-->
-        <div>Icons made by<a href="https://www.freepik.com" target="_blank" title="Freepik"> Freepik</a> from<a href="https://www.flaticon.com/" target="_blank" title="Flaticon"> www.flaticon.com</a>
-        </div>
-    </footer>
-    <script type="text/javascript" src='js/dogroom.js'></script>
+    </div>
+
+</main>
+<footer id="footer">
+    <!--author attribution for using their free icons-->
+    <div>Icons made by<a href="https://www.freepik.com" target="_blank" title="Freepik"> Freepik</a> from<a
+            href="https://www.flaticon.com/" target="_blank" title="Flaticon"> www.flaticon.com</a>
+    </div>
+</footer>
+<script type="text/javascript" src='js/dogroom.js'></script>
+<script type="text/javascript" src='js/happiness.js'></script>
