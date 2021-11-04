@@ -18,14 +18,14 @@ DogItem.init(
     dog_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'dog',
+        model: 'dogs',
         key: 'id',
       },
     },
     item_id: {
         type: DataTypes.INTEGER,
         references: {
-          model: 'item',
+          model: 'items',
           key: 'id',
         },
       },

@@ -23,4 +23,4 @@ UserDog.hasMany(DogItem, {
 
   });
 
-module.exports = { User, UserDog, DogItem };
+module.exports = { User, UserDog, DogItem, Dog, Item };

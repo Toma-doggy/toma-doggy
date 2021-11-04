@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3001;
 const exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
-
+const {Dog, DogItem, Item, User, UserDog} = require('./models');
 const sess = {
   secret: process.env.SECRET,
   cookie: {},
