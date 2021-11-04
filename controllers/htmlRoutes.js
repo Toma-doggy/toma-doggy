@@ -55,9 +55,9 @@ router.get('/adoption', async (req, res) => {
     catch (err){
         res.status(500).json(err)
     }
-    if(req.session.logged_in){
-        res.redirect('/dogroom');
-        }
+    // if(req.session.logged_in){
+    //     res.redirect('/dogroom');
+    //     }
 })
 
 

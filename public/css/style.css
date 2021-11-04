@@ -12,7 +12,8 @@
 }
 /* This is for the entire body section*/
 body {
-  background-image: url("../images/wp4735682.png");
+  /* background-image: url("../images/wp4735682.png"); */
+  background-image: url("../images/image.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -186,7 +187,7 @@ main {
 
 /*This sets the size for the home image in the navbar */
 #home-img {
-  max-height: 25px;
+  max-height: 20px;
 }
 /* This aligns the title in the center of the screen*/
 #room-title {
