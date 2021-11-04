@@ -1,23 +1,25 @@
 const User = require('./User');
 const Dog = require('./Dog');
 const Item = require('./Item');
+const UserDog = require('./UserDog');
+const DogItem = require('DogItem');
 
-User.hasMany(Dog, {
+User.hasMany(UserDog, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
 
-Dog.belongsTo(User, {
+UserDog.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-Dog.hasMany(Item, {
-    foreignKey: 'item_id',
+UserDog.hasMany(DogItem, {
+    foreignKey: 'dogitem_id',
     onDelete: 'CASCADE'
   });
   
-  Item.belongsTo(Dog, {
-    foreignKey: 'item_id'
+  DogItem.belongsTo(UserDog, {
+    foreignKey: 'dogitem_id'
   });
 
-module.exports = { User, Dog, Item };
+module.exports = { User, UserDog, DogItem };

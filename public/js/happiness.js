@@ -1,3 +1,3 @@
-let happyMeter = document.getElementById('happymeter');
+const happyMeter = document.getElementById('happymeter');
 
-happyMeter.style.display = "none";
+happyMeter.style.display = "initial";
