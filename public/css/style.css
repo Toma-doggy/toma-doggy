@@ -34,6 +34,10 @@ nav button a {
   text-decoration: none;
   color: white;
 }
+
+nav button a:hover {
+    color: white
+}
 nav button:hover {
   background-color: var(--darkpink);
   color: white;
@@ -52,6 +56,12 @@ main {
 #center {
   text-align: center;
 }
+
+.form-control:focus {
+    border-color: #973131;
+    box-shadow: 1px 1px 3px 1px grey inset;
+}
+  
 /* This is for the background of the jumbotron display*/
 .jumbo-display {
   background-color: var(--darkpink);
