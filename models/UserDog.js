@@ -18,18 +18,19 @@ UserDog.init(
     happiness: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue: 50
     },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'users',
         key: 'id',
       },
     },
     dog_id: {
         type: DataTypes.INTEGER,
         references: {
-          model: 'dog',
+          model: 'dogs',
           key: 'id',
         },
       },

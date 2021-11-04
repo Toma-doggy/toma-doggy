@@ -49,7 +49,7 @@ treatbtn.addEventListener('click', () =>{
 // canvas.style.marginTop = window.innerHeight / 2 - height / 2 + "px";
 
 let currentState = "idle";
-let breed = "huskydog"
+let breed = "shibadog"
 let spriteSheet = new Image();
 spriteSheet.src = "assets/"+breed+"/"+breed+currentState+".png";
 

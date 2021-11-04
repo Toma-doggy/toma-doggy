@@ -2,7 +2,7 @@ const User = require('./User');
 const Dog = require('./Dog');
 const Item = require('./Item');
 const UserDog = require('./UserDog');
-const DogItem = require('DogItem');
+const DogItem = require('./DogItem');
 
 User.hasMany(UserDog, {
   foreignKey: 'user_id',
@@ -19,7 +19,8 @@ UserDog.hasMany(DogItem, {
   });
   
   DogItem.belongsTo(UserDog, {
-    foreignKey: 'dogitem_id'
+    foreignKey: 'dogitem_id',
+
   });
 
 module.exports = { User, UserDog, DogItem };

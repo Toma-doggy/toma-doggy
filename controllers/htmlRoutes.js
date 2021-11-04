@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { User } = require('../models')
+const { User, UserDog } = require('../models')
 
 router.get('/', async (req, res) => {
     try{
@@ -15,18 +15,27 @@ router.get('/', async (req, res) => {
 router.get('/signup', async (req, res) => {
     try{
         res.render('signup', {
-             logged_in: req.session.logged_in,
-             style: "style.css"
+            logged_in: req.session.logged_in,
+            style: "style.css"
         })
     }
     catch (err){
         res.status(500).json(err)
     }
+    if(req.session.logged_in){
+        res.redirect('/dogroom');
+        }
 })
 
 router.get('/dogroom', async (req, res) => {
     try{
+        const userData = await User.findByPk(req.session.user_id, {
+            include: [UserDog]
+        })
+        const user = await userData.get({ plain: true })
+
         res.render('dogroom', {
+            ...user,
              logged_in: req.session.logged_in,
              style: "style.css"
         })
@@ -46,6 +55,9 @@ router.get('/adoption', async (req, res) => {
     catch (err){
         res.status(500).json(err)
     }
+    if(req.session.logged_in){
+        res.redirect('/dogroom');
+        }
 })
 
 
