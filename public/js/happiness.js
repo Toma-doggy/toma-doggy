@@ -1,3 +1,3 @@
-const happyMeter = document.getElementById('happymeter');
+// const happyMeter = document.getElementById('happymeter');
 
-happyMeter.style.display = "initial";
+// happyMeter.style.display = "initial";
