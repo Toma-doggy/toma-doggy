@@ -118,3 +118,7 @@ canvas {
   margin-left: 30%;
   margin-right: 30%;
 }
+#previews {
+  margin-left: 0px;
+  margin-right: 0px;
+}

@@ -19,7 +19,8 @@
     <nav>
       <button><img id="home-img" src="assets/items/dog-house.png"><a href="/">Home</a></button>
       {{#if logged_in}}
-       <button id="logout"><a href="#">Logout</a></button>
+       <button id="logout"><a href="/">Logout</a></button>
+       <button id="dogroom"><a href="/dogroom">My Dog</a></button>
       {{else}}
       <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
       {{/if}}
