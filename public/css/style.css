@@ -12,7 +12,8 @@
 }
 /* This is for the entire body section*/
 body {
-  background-image: url("../images/wp4735682.png");
+  /* background-image: url("../images/wp4735682.png"); */
+  background-image: url("../images/image.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
