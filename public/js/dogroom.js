@@ -104,7 +104,7 @@ let currentState = "idle";
 let userbreed = localStorage.getItem("breed");
 let breed = userbreed;
 let spriteSheet = new Image();
-spriteSheet.src = "assets/"+breed+"/"+breed+currentState+".png";
+spriteSheet.src = "/assets/"+breed+"/"+breed+currentState+".png";
 
 const State = {
   states: {},
@@ -178,7 +178,7 @@ function make_item()
   itemXpos = 10;
   itemYpos = 100;
   item_image = new Image();
-  item_image.src = 'assets/items/item'+currentItem1+'.png';
+  item_image.src = '/assets/items/item'+currentItem1+'.png';
   item_image.onload = function(){
     context.drawImage(item_image, itemXpos, itemYpos);
   }
@@ -188,7 +188,7 @@ function make_item_bowl()
   itemXpos = 250;
   itemYpos = 150;
   item_image = new Image();
-  item_image.src = 'images/Premium_Dog_Food_Small.png';
+  item_image.src = '/images/Premium_Dog_Food_Small.png';
   item_image.onload = function(){
     context.drawImage(item_image, itemXpos, itemYpos);
   }
@@ -198,20 +198,20 @@ function makeHeart()
   itemXpos = 220;
   itemYpos = 47;
   item_image = new Image();
-  item_image.src = 'images/heart-bubble-small.png';
+  item_image.src = '/images/heart-bubble-small.png';
   item_image.onload = function(){
     context.drawImage(item_image, itemXpos, itemYpos);
   }
 }
 function checkSource(){
-  spriteSheet.src = "assets/"+breed+"/"+breed+currentState+".png";
+  spriteSheet.src = "/assets/"+breed+"/"+breed+currentState+".png";
 };
 function makeTreat()
 {
   itemXpos = 250;
   itemYpos = 130;
   item_image = new Image();
-  item_image.src = 'images/treatsmall.png';
+  item_image.src = '/images/treatsmall.png';
   item_image.onload = function(){
     context.drawImage(item_image, itemXpos, itemYpos);
   }
@@ -221,7 +221,7 @@ function makePoop()
   itemXpos = 120;
   itemYpos = 160;
   item_image = new Image();
-  item_image.src = 'images/poopsmall.png';
+  item_image.src = '/images/poopsmall.png';
   item_image.onload = function(){
     context.drawImage(item_image, itemXpos, itemYpos);
   }
@@ -231,7 +231,7 @@ function makePoopSpeech()
   itemXpos = 70;
   itemYpos = 20;
   item_image = new Image();
-  item_image.src = 'images/poop-speech-small.png';
+  item_image.src = '/images/poop-speech-small.png';
   item_image.onload = function(){
     context.drawImage(item_image, itemXpos, itemYpos);
   }
@@ -241,7 +241,7 @@ function makeBall()
   itemXpos = 260;
   itemYpos = 160;
   item_image = new Image();
-  item_image.src = 'images/pixelball-small.png';
+  item_image.src = '/images/pixelball-small.png';
   item_image.onload = function(){
     context.drawImage(item_image, itemXpos, itemYpos);
   }
@@ -251,7 +251,7 @@ function makeDiscoBall()
   itemXpos = 154;
   itemYpos = 0;
   item_image = new Image();
-  item_image.src = 'images/Disco-Ball-Small.png';
+  item_image.src = '/images/Disco-Ball-Small.png';
   item_image.onload = function(){
     context.drawImage(item_image, itemXpos, itemYpos);
   }
