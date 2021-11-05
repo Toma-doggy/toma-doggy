@@ -74,4 +74,21 @@ router.post('/logout', (req, res) => {
   }
 });
 
+// router.get("/loggedinuser",async (req,res)=>{
+//   try {
+//     const dogData = await User.findByPk(req.session.user_id, {
+//       include:  [UserDog] ,
+//     });
+//     res.json(dogData);
+//     if (dogData) {
+//       res.status(200)
+//     } else {
+//       res.status(404).end();
+//     }
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
+
 module.exports = router;

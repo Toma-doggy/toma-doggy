@@ -1,4 +1,11 @@
 <header>
+    <style>
+         body {
+            background-image: url("images/love this.png");
+            
+            background-size: cover;
+         }
+      </style>
     <h1 id="room-title">{{userDogs.[0].name}}'s Room</h1>
     <div class="cards" id="hapinesscard">
         <div class="card-body" id="cardspacing">
@@ -11,14 +18,18 @@
                 <ul class="dropdown-menu cards" aria-labelledby="dropdownMenuButton1">
                     <li><button class="dropdown-item" href="#" id="treatbtn"><img id="home-img"
                                 src="./assets/items/bone.png"> Give Treat</button></li>
-                    <li><button class="dropdown-item" href="#"><img id="home-img" src="./assets/items/grooming.png">
+                    <li><button class="dropdown-item" href="#" id="groombtn"><img id="home-img" src="./assets/items/grooming.png">
                             Groom</button></li>
-                    <li><button class="dropdown-item" href="#"><img id="home-img" src="./assets/items/pet-food.png">
+                    <li><button class="dropdown-item" href="#" id="feedbtn"><img id="home-img" src="./assets/items/pet-food.png">
                             Feed</button></li>
                     <li><button class="dropdown-item" href="#" id="playbtn"><img id="home-img"
-                                src="./assets/items/tennis-ball.png"> Play</button></li>
+                                src="./assets/items/tennis-ball.png"> Run</button></li>
                     <li><button class="dropdown-item" href="#" id="pottybtn"><img id="home-img"
                                 src="./assets/items/poop.png"> Go Potty</button></li>
+                    <li><button class="dropdown-item" href="#" id="pickupbtn"><img id="home-img"
+                                src="./assets/items/nopoop.png"> Pick Up Time!</button></li>
+                    <li><button class="dropdown-item" href="#" id="dancebtn"><img id="home-img"
+                                src="./assets/items/disco-ball.png"> Dance </button></li>                        
                 </ul>
             </div>
             <!--This is the dropdown menu for the inventory-->
