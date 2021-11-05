@@ -16,7 +16,7 @@ body {
   /* background-image: url("../images/image.png"); */
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 1200px;
  
 }
 
@@ -77,6 +77,17 @@ main {
 .form-control:focus {
     border-color: #973131;
     box-shadow: 1px 1px 3px 1px grey inset;
+}
+
+.modal-header {
+  width: 80%;
+}
+
+.modal-body {
+  margin: 1%;
+  margin-top: 5%;
+  padding: 0;
+  width: 80%;
 }
   
 /* This is for the background of the jumbotron display*/
