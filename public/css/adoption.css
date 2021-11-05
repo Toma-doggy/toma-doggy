@@ -223,8 +223,10 @@
     }
 
     .carousel-caption {
-      
+      position: relative;
+      left: 0;
+      top: 0;
       padding: 0;
-      margin-bottom: 8%;
+      margin-bottom: 10%;
     }
   }
