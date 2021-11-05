@@ -1,0 +1,382 @@
+:root {
+  --font: 'VT323', monospace;
+  --purple: #9d8189;
+  --darkpink: #f4acb7;
+  --lightpink: #ffcad4;
+  --yellow: #ffe5d9;
+  --green: #d8e2dc;
+}
+/*This is CSS that will be applied throughout the html */
+* {
+  font-family: var(--font);
+}
+/* This is for the entire body section*/
+body {
+  background-image: url("../images/wp4735682.png");
+  /* background-image: url("../images/image.png"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1200px;
+ 
+}
+
+/*This is for the buttons */
+button {
+  background-color: var(--purple);
+  color: white;
+  size: 5%;
+}
+
+/* This is for the navbar*/
+nav {
+  margin: 2%;
+  text-align: right;
+  height: 60px;
+}
+/*changes the text color and hover effects of the nav buttons*/
+nav button a {
+  text-decoration: none;
+  color: white;
+}
+
+nav button a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+nav button {
+  height: 80%;
+}
+nav button:hover {
+  background-color: var(--darkpink);
+  color: white;
+}
+/* This is for the header title*/
+#title {
+  text-align: center;
+  color: white;
+  font-size: 400%;
+	text-shadow: 2px 2px var(--darkpink);
+  background-color: rgba(95, 82, 82, 0.5);
+  margin: 20%;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 3px double var(--yellow);
+  padding: 3%;
+}
+/* This is for the main section*/
+main {
+  margin: 2%;
+}
+/* This is to center the text of the currently available breeds*/
+#center {
+  text-align: center;
+  color: white;
+}
+
+.form-control:focus {
+    border-color: #973131;
+    box-shadow: 1px 1px 3px 1px grey inset;
+}
+
+.modal-header {
+  width: 80%;
+}
+
+.modal-body {
+  margin: 1%;
+  margin-top: 5%;
+  padding: 0;
+  width: 80%;
+}
+  
+/* This is for the background of the jumbotron display*/
+.jumbo-display {
+  border-color: #973131;
+  box-shadow: 2px 2px 5px 2px grey inset;
+  background-color: var(--darkpink);
+  margin: 15%;
+  margin-bottom: 3%;
+  margin-top: 2%;
+  padding: 3%;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+.container {
+  background-color: rgba(43, 38, 38, 0.5);
+  border: 3px double var(--yellow);
+  box-shadow: 2px 2px 5px 2px rgb(65, 65, 65) inset;
+  padding: 3%;
+}
+/* This sets the color for all the cards in the homepage and sign up area*/
+.cards {
+  background-color: var(--darkpink);
+  border: 3px solid white;
+  box-shadow: 2px 2px 5px 2px rgb(65, 65, 65);
+}
+
+.home-card-container {
+  margin: 10%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mobile-dogs {
+  display: none;
+}
+/*This is the CSS for the footer */
+#footer {
+  text-align: center;
+  margin-top: 3%;
+}
+
+.signup-btn a{
+  text-decoration: none;
+  color: white;
+}
+
+@keyframes slidebg {
+  to {
+    background-position: 20vw;
+  }
+}
+
+.signup-btn:hover a {
+  color: black;
+}
+.signup-btn:hover {
+  background-image: linear-gradient(
+      90deg,
+      #fff45b 0%,
+      #ff94db 49%,
+      #9ff8ab 80%,
+      #fff45c 100%
+    );
+    animation: slidebg 10s linear infinite;
+    box-shadow: 0 0 8px 8px var(--darkpink);
+}
+/*sizes the dog images the same */
+.dog-img {
+  max-height: 359px;
+  border: 3px solid white;
+
+  margin: 1%;
+  
+}
+
+.cards {
+  align-items: center;
+}
+
+
+
+/*THIS STARTS THE STYLING FOR THE SIGN-UP.HTML */
+
+/*This styles the card holding the sign up form*/
+.center-card {
+  margin: 20%;
+  margin-top: 0;
+}
+/* This centers the text above the sign up form*/
+#account-text {
+  text-align: center;
+}
+/* THIS IS THE CSS FOR THE DOG HOUSE HTML*/
+
+/*This sets the size for the home image in the navbar */
+#home-img {
+  max-height: 20px;
+}
+/* This aligns the title in the center of the screen*/
+#room-title {
+  text-align: center;
+  font-size: 8vh;
+  font-weight: bold;
+  color: white;
+  text-shadow: 3px 3px black;
+}
+/*sets the size for the leash in the card*/
+#leash-img {
+  max-height: 20px;
+}
+/*this is for the animation stuff*/
+canvas {
+  display:flex;
+  padding: 0;
+  /* border: solid 6px #AAA; */
+  border-radius: 10px;
+  margin:2%;
+  background-image: url("../images/dogroom.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+/*this styles the placement of the dog gif card*/
+#gifcard {
+  display: flex;
+  justify-content: center;
+}
+/*this is the card that holds the happiness meter*/
+#hapinesscard {
+  margin: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  opacity: 90%;
+}
+/*this is for the heart images if we decide to use them*/
+/* #happymeter {
+  max-height: 20px;
+  
+} */
+/*this is for the contents of the div with the actions, inventory, and happiness bar*/
+#cardspacing {
+  display:flex;
+  justify-content:space-between;
+  padding: 2%;
+}
+/*this sets the background for the entire room page*/
+#dog-room-background {
+  background-image: url("../images/doghouse.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+/*this is the entire card that gives the option to go outside*/
+#go-outside-card {
+  margin: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  opacity: 90%;
+}
+/*this sets the color for the happiness bar"*/
+#bar-color {
+  background-color:#e23cab;
+}
+
+
+/* This is an iphone x*/
+@media screen and (max-width: 375px) {
+  /*resizes the title to fit the screen better*/
+  #room-title {
+    font-size: 200%;
+  }
+
+  /* #dog-room-background {
+    background-image: url("../images/doghouse2.jpg");
+    background-size: 135px;
+    background-repeat: repeat;
+    background-position: center;
+  } */
+  #canvas {
+   max-width: 350px;
+   margin-top:50px;
+  }
+
+  #dog-room-background {
+    background-image: url("../images/mobile.png");
+  background-repeat: no-repeat;
+  background-size: 375px 812px;
+  background-position: center;
+  
+  }
+}
+
+@media screen and (max-width: 414px) {
+  /*resizes the title to fit the screen better*/
+  #room-title {
+    font-size: 200%;
+  }
+
+  /* #dog-room-background {
+    background-image: url("../images/doghouse2.jpg");
+    background-size: 135px;
+    background-repeat: repeat;
+    background-position: center;
+  } */
+  #canvas {
+   max-width: 350px;
+   margin-top:50px;
+  }
+
+  #dog-room-background {
+    background-image: url("../images/mobile.png");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  
+  }
+}
+
+@media screen and (max-width: 800px) {
+  * {
+    margin: 0;
+  }
+
+  .modal-header {
+    width: 80%;
+  }
+
+  .modal-body {
+    margin: 1%;
+    margin-top: 5%;
+    padding: 0;
+    width: 80%;
+  }
+
+  .center-card {
+    margin: 2%;
+  }
+
+  #title {
+    font-size: 2rem;
+    padding: 1%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin: 8%;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+
+  .jumbo-display {
+    padding: 2%;
+    margin: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .container {
+    display: none;
+  }
+
+  .mobile-dogs {
+    display: block;
+    margin: 2%;
+  }
+
+  .tab-content {
+    background-color: rgba(10, 10, 10, 0.479);
+    color: white;
+    
+    box-shadow: 3px 3px 3px 2px rgb(65, 65, 65);
+  }
+
+  .nav-link {
+    color: black;
+    background-color: var(--darkpink);
+    box-shadow:  2px 2px 1px 2px grey inset;
+  }
+  .nav-link:focus {
+    box-shadow: 2px 2px 1px 3px grey;
+  }
+
+  
+}
