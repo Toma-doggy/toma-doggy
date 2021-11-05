@@ -8,7 +8,10 @@ shibaAdoptForm.addEventListener('submit', async (e) => {
     if(shibaDogName){
         const resp = await fetch('/api/userdogs', {
             method: 'POST',
-            body: JSON.stringify({name: shibaDogName}),
+            body: JSON.stringify({
+                name: shibaDogName,
+                dog_id:1
+            }),
             headers: { 'Content-Type': 'application/json' }
         })
 
@@ -30,7 +33,9 @@ blackdogAdoptForm.addEventListener('submit', async (e) => {
     if(blackDogName){
         const resp = await fetch('/api/userdogs', {
             method: 'POST',
-            body: JSON.stringify({name: blackDogName}),
+            body: JSON.stringify({
+                name: blackDogName,
+                dog_id: 2}),
             headers: { 'Content-Type': 'application/json' }
         })
 
@@ -52,7 +57,10 @@ huskydogAdoptForm.addEventListener('submit', async (e) => {
     if(huskyDogName){
         const resp = await fetch('/api/userdogs', {
             method: 'POST',
-            body: JSON.stringify({name: huskyDogName}),
+            body: JSON.stringify({
+                name: huskyDogName,
+                dog_id:3
+            }),
             headers: { 'Content-Type': 'application/json' }
         })
 

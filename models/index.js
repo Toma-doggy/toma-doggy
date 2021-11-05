@@ -18,8 +18,18 @@ UserDog.hasMany(DogItem, {
     onDelete: 'CASCADE'
   });
   
-  DogItem.belongsTo(UserDog, {
+DogItem.belongsTo(UserDog, {
     foreignKey: 'dogitem_id',
+
+  });
+
+  Dog.hasMany(UserDog, {
+    foreignKey: 'dog_id',
+    onDelete: 'CASCADE'
+  });
+  
+  UserDog.belongsTo(Dog, {
+    foreignKey: 'dog_id',
 
   });
 

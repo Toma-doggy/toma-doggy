@@ -13,11 +13,7 @@ Dog.init(
     },
     breed: {
       type: DataTypes.STRING,
-    },
-    image: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    }
   },
   {
     sequelize,

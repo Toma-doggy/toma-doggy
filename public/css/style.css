@@ -231,7 +231,10 @@ main {
 /* This aligns the title in the center of the screen*/
 #room-title {
   text-align: center;
+  font-size: 8vh;
+  font-weight: bold;
   color: white;
+  text-shadow: 3px 3px black;
 }
 /*sets the size for the leash in the card*/
 #leash-img {
@@ -241,9 +244,8 @@ main {
 canvas {
   display:flex;
   padding: 0;
-  border: solid 6px #AAA;
-  border-radius: 0px;
-  border-color: white;
+  /* border: solid 6px #AAA; */
+  border-radius: 10px;
   margin:2%;
   background-image: url("../images/dogroom.jpg");
   background-repeat: no-repeat;
