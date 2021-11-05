@@ -192,6 +192,7 @@ main {
 /* This aligns the title in the center of the screen*/
 #room-title {
   text-align: center;
+  color: white;
 }
 /*sets the size for the leash in the card*/
 #leash-img {
@@ -202,8 +203,14 @@ canvas {
   display:flex;
   padding: 0;
   border: solid 6px #AAA;
-  border-radius: 10px;
+  border-radius: 0px;
+  border-color: white;
   margin:2%;
+  background-image: url("../images/dogroom.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
 }
 
 /*this styles the placement of the dog gif card*/
@@ -214,15 +221,91 @@ canvas {
 /*this is the card that holds the happiness meter*/
 #hapinesscard {
   margin: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  opacity: 90%;
 }
-
-#happymeter {
+/*this is for the heart images if we decide to use them*/
+/* #happymeter {
   max-height: 20px;
   
-}
-
+} */
+/*this is for the contents of the div with the actions, inventory, and happiness bar*/
 #cardspacing {
   display:flex;
   justify-content:space-between;
-  padding: 5%;
+  padding: 2%;
+}
+/*this sets the background for the entire room page*/
+#dog-room-background {
+  background-image: url("../images/doghouse.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+/*this is the entire card that gives the option to go outside*/
+#go-outside-card {
+  margin: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  opacity: 90%;
+}
+/*this sets the color for the happiness bar"*/
+#bar-color {
+  background-color:#e23cab;
+}
+
+
+/* This is an iphone x*/
+@media screen and (max-width: 375px) {
+  /*resizes the title to fit the screen better*/
+  #room-title {
+    font-size: 200%;
+  }
+
+  /* #dog-room-background {
+    background-image: url("../images/doghouse2.jpg");
+    background-size: 135px;
+    background-repeat: repeat;
+    background-position: center;
+  } */
+  #canvas {
+   max-width: 350px;
+   margin-top:50px;
+  }
+
+  #dog-room-background {
+    background-image: url("../images/mobile.png");
+  background-repeat: no-repeat;
+  background-size: 375px 812px;
+  background-position: center;
+  
+  }
+}
+
+@media screen and (max-width: 414px) {
+  /*resizes the title to fit the screen better*/
+  #room-title {
+    font-size: 200%;
+  }
+
+  /* #dog-room-background {
+    background-image: url("../images/doghouse2.jpg");
+    background-size: 135px;
+    background-repeat: repeat;
+    background-position: center;
+  } */
+  #canvas {
+   max-width: 350px;
+   margin-top:50px;
+  }
+
+  #dog-room-background {
+    background-image: url("../images/mobile.png");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  
+  }
 }
