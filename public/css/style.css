@@ -109,6 +109,10 @@ main {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.mobile-dogs {
+  display: none;
+}
 /*This is the CSS for the footer */
 #footer {
   text-align: center;
@@ -144,21 +148,28 @@ main {
 .dog-img {
   max-height: 359px;
   border: 3px solid white;
-  box-shadow: 5px 5px 5px 2px rgb(65, 65, 65) inset;
+
+  margin: 1%;
+  
 }
 
-@media screen and (max-width: 400px) {
+.cards {
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
   * {
     margin: 0;
   }
 
   #title {
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding: 1%;
     padding-top: 3%;
     padding-bottom: 3%;
-    margin: 2%;
-    margin-top: 8%;
+    margin: 8%;
+    margin-right: 1%;
+    margin-left: 1%;
   }
 
   .jumbo-display {
@@ -171,7 +182,35 @@ main {
   .display-4 {
     font-size: 2rem;
   }
+
+  .container {
+    display: none;
+  }
+
+  .mobile-dogs {
+    display: block;
+    margin: 2%;
+  }
+
+  .tab-content {
+    background-color: rgba(10, 10, 10, 0.479);
+    color: white;
+    
+    box-shadow: 3px 3px 3px 2px rgb(65, 65, 65);
+  }
+
+  .nav-link {
+    color: black;
+    background-color: var(--darkpink);
+    box-shadow:  2px 2px 1px 2px grey inset;
+  }
+  .nav-link:focus {
+    box-shadow: 2px 2px 1px 3px grey;
+  }
+
+  
 }
+
 /*THIS STARTS THE STYLING FOR THE SIGN-UP.HTML */
 
 /*This styles the card holding the sign up form*/
@@ -208,6 +247,11 @@ canvas {
   /* border: solid 6px #AAA; */
   border-radius: 10px;
   margin:2%;
+  background-image: url("../images/dogroom.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
 }
 
 /*this styles the placement of the dog gif card*/
@@ -218,15 +262,91 @@ canvas {
 /*this is the card that holds the happiness meter*/
 #hapinesscard {
   margin: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  opacity: 90%;
 }
-
-#happymeter {
+/*this is for the heart images if we decide to use them*/
+/* #happymeter {
   max-height: 20px;
   
-}
-
+} */
+/*this is for the contents of the div with the actions, inventory, and happiness bar*/
 #cardspacing {
   display:flex;
   justify-content:space-between;
-  padding: 5%;
+  padding: 2%;
+}
+/*this sets the background for the entire room page*/
+#dog-room-background {
+  background-image: url("../images/doghouse.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+/*this is the entire card that gives the option to go outside*/
+#go-outside-card {
+  margin: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  opacity: 90%;
+}
+/*this sets the color for the happiness bar"*/
+#bar-color {
+  background-color:#e23cab;
+}
+
+
+/* This is an iphone x*/
+@media screen and (max-width: 375px) {
+  /*resizes the title to fit the screen better*/
+  #room-title {
+    font-size: 200%;
+  }
+
+  /* #dog-room-background {
+    background-image: url("../images/doghouse2.jpg");
+    background-size: 135px;
+    background-repeat: repeat;
+    background-position: center;
+  } */
+  #canvas {
+   max-width: 350px;
+   margin-top:50px;
+  }
+
+  #dog-room-background {
+    background-image: url("../images/mobile.png");
+  background-repeat: no-repeat;
+  background-size: 375px 812px;
+  background-position: center;
+  
+  }
+}
+
+@media screen and (max-width: 414px) {
+  /*resizes the title to fit the screen better*/
+  #room-title {
+    font-size: 200%;
+  }
+
+  /* #dog-room-background {
+    background-image: url("../images/doghouse2.jpg");
+    background-size: 135px;
+    background-repeat: repeat;
+    background-position: center;
+  } */
+  #canvas {
+   max-width: 350px;
+   margin-top:50px;
+  }
+
+  #dog-room-background {
+    background-image: url("../images/mobile.png");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  
+  }
 }

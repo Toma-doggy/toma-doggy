@@ -192,3 +192,39 @@
   .card-img-top {
     height: 400px;
   }
+
+  #carousel {
+    display: none;
+  }
+
+  @media screen and (max-width: 800px) {
+
+    body {
+      background-image: url("../images/wp4735682.png");
+      background-repeat: no-repeat;
+      height: 1000px;
+    }
+
+    #carousel {
+      display: block;
+      margin: 10%;
+      margin-bottom: 30%;
+    }
+    .adopt-deck {
+      display: none;
+    }
+
+    #title {
+      font-size: 2rem;
+    }
+
+    .carousel-item {
+      background-color: rgba(95, 82, 82, 0.5);
+    }
+
+    .carousel-caption {
+      
+      padding: 0;
+      margin-bottom: 8%;
+    }
+  }
