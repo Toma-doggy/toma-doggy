@@ -16,6 +16,7 @@ shibaAdoptForm.addEventListener('submit', async (e) => {
         })
 
         if(resp.ok){
+            getUserData();
             console.log(resp);
             location.replace('/dogroom')
         } else {
@@ -66,6 +67,7 @@ huskydogAdoptForm.addEventListener('submit', async (e) => {
         })
 
         if(resp.ok){
+            getUserData();
             console.log(resp);
             location.replace('/dogroom')
         } else {

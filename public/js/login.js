@@ -36,6 +36,7 @@ signupForm.addEventListener('submit', async (e) => {
         })
 
         if(resp.ok){
+            getUserData();
             location.href = '/adoption'
         } else {
             alert('User already exists!')
