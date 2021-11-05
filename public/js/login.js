@@ -14,8 +14,9 @@ loginForm.addEventListener('submit', async (e) => {
         })
 
         if(resp.ok){
+            getUserData();
             console.log(resp);
-            location.replace('/dogroom')
+            location.replace('/dogroom');
         } else {
             alert('YOU ENTERED THE WRONG INFORMATION')
         }
@@ -41,3 +42,19 @@ signupForm.addEventListener('submit', async (e) => {
         }
     }
 });
+function getUserData (){
+    fetch('api/users/loggedinuser')
+    .then(response => response.json())
+    .then(function(data){
+    let currentBreed = data.userDogs[0].dog_id;
+    if(currentBreed === 1){
+       breed = "shibadog"
+    }
+    else if(currentBreed === 2){
+       breed = "blackdog"
+    }else if(currentBreed === 3){
+       breed = "huskydog"
+      }
+      localStorage.setItem('breed',breed)
+    });
+  }

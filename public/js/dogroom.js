@@ -100,8 +100,9 @@ dancebtn.addEventListener('click', ()=>{
 // canvas.style.marginTop = window.innerHeight / 2 - height / 2 + "px";
 
 let currentState = "idle";
-
-let breed = "shibadog"
+// getUserData();
+let userbreed = localStorage.getItem("breed");
+let breed = userbreed;
 let spriteSheet = new Image();
 spriteSheet.src = "assets/"+breed+"/"+breed+currentState+".png";
 
@@ -256,20 +257,4 @@ function makeDiscoBall()
   }
 }
 
-// function getUserData (){
-//   fetch('api/users/loggedinuser')
-//   .then(response => response.json())
-//   .then(function(data){
-//   let currentBreed = data.userDogs[0].dog_id;
-//   let breed;
-//   if(currentBreed === 1){
-//      breed = "shibadog"
-//   }
-//   else if(currentBreed === 2){
-//      breed = "blackdog"
-//   }else if(currentBreed === 3){
-//      breed = "huskydog"
-//   }
-//   return breed;
-//   });
-// }
+
