@@ -245,7 +245,10 @@ canvas {
   display:flex;
   padding: 0;
   /* border: solid 6px #AAA; */
-  border-radius: 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
   margin:2%;
   background-image: url("../images/dogroom.jpg");
   background-repeat: no-repeat;
