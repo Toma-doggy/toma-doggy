@@ -64,3 +64,9 @@ huskydogAdoptForm.addEventListener('submit', async (e) => {
         }
     }
 });
+
+$(".prev").click(function(){
+    $("#carousel").carousel("prev");
+  });
+
+$("#carousel").carousel();
