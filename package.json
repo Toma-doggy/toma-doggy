@@ -22,7 +22,8 @@
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.2",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "util": "^0.12.4"
   },
   "bugs": {
     "url": "https://github.com/Toma-doggy/toma-doggy/issues"
