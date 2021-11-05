@@ -1,32 +1,25 @@
-<header>
+<body id="dog-room-background">
+    <header>
     <h1 id="room-title">{{userDogs.[0].name}}'s Room</h1>
     <div class="cards" id="hapinesscard">
         <div class="card-body" id="cardspacing">
             <!--This is the dropdown menu for the actions-->
             <div class="dropdown btn-group">
-                <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Actions
-                </button>
+                <button class="dropdown-toggle" type="button"  data-bs-toggle="dropdown"aria-expanded="false">Actions</button>
                 <ul class="dropdown-menu cards" aria-labelledby="dropdownMenuButton1">
                     <li><button class="dropdown-item" href="#" id="treatbtn"><img id="home-img"
-                                src="./assets/items/bone.png"> Give Treat</button></li>
-                    <li><button class="dropdown-item" href="#"><img id="home-img" src="./assets/items/grooming.png">
-                            Groom</button></li>
-                    <li><button class="dropdown-item" href="#"><img id="home-img" src="./assets/items/pet-food.png">
-                            Feed</button></li>
+                    src="./assets/items/bone.png"> Give Treat</button></li>
+                    <li><button class="dropdown-item" href="#"><img id="home-img" src="./assets/items/grooming.png"> Groom</button></li>
+                    <li><button class="dropdown-item" href="#"><img id="home-img" src="./assets/items/pet-food.png"> Feed</button></li>
                     <li><button class="dropdown-item" href="#" id="playbtn"><img id="home-img"
-                                src="./assets/items/tennis-ball.png"> Play</button></li>
+                    src="./assets/items/tennis-ball.png"> Play</button></li>
                     <li><button class="dropdown-item" href="#" id="pottybtn"><img id="home-img"
-                                src="./assets/items/poop.png"> Go Potty</button></li>
+                    src="./assets/items/poop.png"> Go Potty</button></li>
                 </ul>
             </div>
             <!--This is the dropdown menu for the inventory-->
             <div class="dropdown btn-group">
-                <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Inventory
-                </button>
+                <button class="dropdown-toggle" type="button"  data-bs-toggle="dropdown" aria-expanded="false">Inventory</button>
                 <ul class="dropdown-menu cards" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="#"><img id="home-img" src="/images/pet-bed (1).png"> Bed</a></li>
                     <li><a class="dropdown-item" href="#"><img id="home-img" src="/images/dog-bowl.png"> Food Bowl</a></li>
@@ -35,17 +28,22 @@
                     <li><a class="dropdown-item" href="#"><img id="home-img" src="/images/furniture (1).png"> Chair</a></li>
                 </ul>
             </div>
-            <!--this styles the happiness meter-->
-            <h5 class="btn-group">Happiness:</h5>
+            {{!-- <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
             <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
             <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
             <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
             <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
             <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
             <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
-            <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
-            <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
+            <img class="btn-group" id="happymeter" src="/images/heart.png"></img> --}}
 
+            <!--this styles the happiness meter and the style width sets how full the happiness meter is-->
+            <div>
+                <h5 class="btn-group">Happiness:</h5>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" id="bar-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                </div>
+            </div>
         </div>
     </div>
 </header>
@@ -57,7 +55,7 @@
     <br>
     <!--This is the go outside card-->
     <div>
-        <div class="card-body cards">
+        <div class="card-body cards" id="go-outside-card">
 
             <h5 class="card-title">Go Outside?</h5>
             <p class="card-text">Take your dog out for some much needed excersise! Click the button to go enjoy the
@@ -76,3 +74,4 @@
 </footer>
 <script type="text/javascript" src='js/dogroom.js'></script>
 <script type="text/javascript" src='js/happiness.js'></script>
+</body>
