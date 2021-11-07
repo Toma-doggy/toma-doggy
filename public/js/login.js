@@ -36,7 +36,7 @@ signupForm.addEventListener('submit', async (e) => {
         })
 
         if(resp.ok){
-            getUserData();
+            
             location.href = '/adoption'
         } else {
             alert('User already exists!')
@@ -44,7 +44,7 @@ signupForm.addEventListener('submit', async (e) => {
     }
 });
 function getUserData (){
-    fetch('api/users/loggedinuser')
+    fetch('/api/users/loggedinuser')
     .then(response => response.json())
     .then(function(data){
     let currentBreed = data.userDogs[0].dog_id;
