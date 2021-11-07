@@ -239,13 +239,13 @@ canvas {
   padding: 2%;
 }
 /*this sets the background for the entire room page*/
-#dog-room-background {
+/* #dog-room-background {
   background-image: url("../images/doghouse.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   
-}
+} */
 /*this is the entire card that gives the option to go outside*/
 #go-outside-card {
   margin: 2%;

@@ -1,4 +1,13 @@
 <body id="dog-room-background">
+    <style>
+        #dog-room-background {
+    background-image: url("../images/doghouse.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+  
+}</style>
     <header>
     <h1 id="room-title">{{userDogs.[0].name}}'s Room</h1>
     <div class="cards" id="hapinesscard">
@@ -27,7 +36,7 @@
             <div class="dropdown btn-group">
                 <button class="dropdown-toggle" type="button"  data-bs-toggle="dropdown" aria-expanded="false">Inventory</button>
                 <ul class="dropdown-menu cards" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#"><img id="home-img" src="/images/pet-bed (1).png"> Bed</a></li>
+                    <li><a class="dropdown-item" id="bedbtn" href="#"><img id="home-img" src="/images/pet-bed (1).png"> Bed</a></li>
                     <li><a class="dropdown-item" href="#"><img id="home-img" src="/images/dog-bowl.png"> Food Bowl</a></li>
                     <li><a class="dropdown-item" href="#"><img id="home-img" src="/images/carpet.png"> Rug</a></li>
                     <li><a class="dropdown-item" href="#"><img id="home-img" src="/images/floor-lamp.png"> Lamp</a></li>
@@ -67,7 +76,8 @@
             <p class="card-text">Take your dog out for some much needed excersise! Click the button to go enjoy the
                 great
                 outdoors with your pet.</p>
-            <button><img src="/assets/items/leash.png" id="leash-img" alt="..."> Go Outside</button>
+            <button  onclick="myFunction()" ><img src="/assets/items/leash.png" id="leash-img" alt="..."> Go Outside</button>
+            <button  onclick="myFunction2()" >Return Home</button>
         </div>
     </div>
 
@@ -78,6 +88,20 @@
             href="https://www.flaticon.com/" target="_blank" title="Flaticon"> www.flaticon.com</a>
     </div>
 </footer>
+<script>
+function myFunction() {
+    console.log("test");
+    document.getElementById('dog-room-background').style.backgroundImage = "url(/images/lovethisbigger.png)";
+    document.getElementById('canvas').style.backgroundImage = "url()";
+
+}
+function myFunction2() {
+    console.log("test");
+    document.getElementById('dog-room-background').style.backgroundImage = "url(/images/doghouse.jpeg)";
+    document.getElementById('canvas').style.backgroundImage = "url(/images/dogroom.jpg)";
+
+}
+</script>
 <script type="text/javascript" src='/js/dogroom.js'></script>
 <script type="text/javascript" src='/js/happiness.js'></script>
 </body>
