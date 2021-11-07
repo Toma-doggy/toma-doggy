@@ -256,5 +256,20 @@ function makeDiscoBall()
     context.drawImage(item_image, itemXpos, itemYpos);
   }
 }
+// const bedbtn = document.getElementById('bedbtn');
+// bedbtn.addEventListener('click', () =>{
+// makeBed();
+// });
+// function makeBed()
+// {
+//   itemXpos = 154;
+//   itemYpos = 0;
+//   item_image = new Image();
+//   item_image.src = '/images/pet-bed (1).png';
+//   item_image.onload = function(){
+//     context.drawImage(item_image, itemXpos, itemYpos);
+//   }
+// }
+
 
 
