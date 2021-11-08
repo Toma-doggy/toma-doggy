@@ -8,30 +8,30 @@
                 <button class="dropdown-toggle" type="button"  data-bs-toggle="dropdown"aria-expanded="false">Actions</button>
                 <ul class="dropdown-menu cards" aria-labelledby="dropdownMenuButton1">
                     <li><button class="dropdown-item" href="#" id="treatbtn"><img id="home-img"
-                                src="./assets/items/bone.png"> Give Treat</button></li>
-                    <li><button class="dropdown-item" href="#" id="groombtn"><img id="home-img" src="./assets/items/grooming.png">
-                            Groom</button></li>
-                    <li><button class="dropdown-item" href="#" id="feedbtn"><img id="home-img" src="./assets/items/pet-food.png">
+                                src="/assets/items/bone.png"> Give Treat</button></li>
+                    <li><button class="dropdown-item" href="#" id="feedbtn"><img id="home-img" src="/assets/items/pet-food.png">
                             Feed</button></li>
                     <li><button class="dropdown-item" href="#" id="playbtn"><img id="home-img"
-                                src="./assets/items/tennis-ball.png"> Run</button></li>
+                                src="/assets/items/tennis-ball.png"> Run</button></li>
                     <li><button class="dropdown-item" href="#" id="pottybtn"><img id="home-img"
-                                src="./assets/items/poop.png"> Go Potty</button></li>
+                                src="/assets/items/poop.png"> Go Potty</button></li>
                     <li><button class="dropdown-item" href="#" id="pickupbtn"><img id="home-img"
-                                src="./assets/items/nopoop.png"> Pick Up Time!</button></li>
+                                src="/assets/items/nopoop.png"> Pick Up Time!</button></li>
                     <li><button class="dropdown-item" href="#" id="dancebtn"><img id="home-img"
-                                src="./assets/items/disco-ball.png"> Dance </button></li>                        
+                                src="/assets/items/disco-ball.png"> Dance </button></li>                        
                 </ul>
             </div>
             <!--This is the dropdown menu for the inventory-->
             <div class="dropdown btn-group">
-                <button class="dropdown-toggle" type="button"  data-bs-toggle="dropdown" aria-expanded="false">Inventory</button>
+                <button class="dropdown-toggle" id="inventorybtn" type="button"  data-bs-toggle="dropdown" aria-expanded="false">Inventory</button>
                 <ul class="dropdown-menu cards" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#"><img id="home-img" src="/images/pet-bed (1).png"> Bed</a></li>
-                    <li><a class="dropdown-item" href="#"><img id="home-img" src="/images/dog-bowl.png"> Food Bowl</a></li>
-                    <li><a class="dropdown-item" href="#"><img id="home-img" src="/images/carpet.png"> Rug</a></li>
-                    <li><a class="dropdown-item" href="#"><img id="home-img" src="/images/floor-lamp.png"> Lamp</a></li>
-                    <li><a class="dropdown-item" href="#"><img id="home-img" src="/images/furniture (1).png"> Chair</a></li>
+                    <li><a class="dropdown-item" id="bedbtn" href="#"><img id="home-img" src="/images/bedsmall.png"> Bed</a></li>
+                    <li><a class="dropdown-item" id="katanabtn" href="#"><img id="home-img" src="/images/katanasmall.png">Katana Decoration</a></li>
+                    <li><a class="dropdown-item" id="lampbtn" href="#"><img id="home-img" src="/images/lampsmall.png"> Lamp</a></li>
+                    <li><a class="dropdown-item" id="artbtn" href="#"><img id="home-img" src="/images/dogagotchipaintingsmall.png"> Art</a></li>
+                    <li><a class="dropdown-item" id="tvbtn" href="#"><img id="home-img" src="/images/tvsmall.png"> TV</a></li>
+                    <li><a class="dropdown-item" id="fishtankbtn" href="#"><img id="home-img" src="/images/fishtanksmall.png"> Fish Tank</a></li>
+                    <li><a class="dropdown-item" id="clearbtn" href="#"><img id="home-img" src="/images/clear.png">Clear all items!</a></li>
                 </ul>
             </div>
             {{!-- <img class="btn-group" id="happymeter" src="/images/heart.png"></img>
@@ -47,7 +47,7 @@
             <div>
                 <h5 class="btn-group">Happiness:</h5>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" id="bar-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" id="bar-color" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
                 </div>
             </div>
         </div>
@@ -67,7 +67,8 @@
             <p class="card-text">Take your dog out for some much needed excersise! Click the button to go enjoy the
                 great
                 outdoors with your pet.</p>
-            <button><img src="./assets/items/leash.png" id="leash-img" alt="..."> Go Outside</button>
+            <button  id="gooutsidebtn" onclick="myFunction()" ><img src="/assets/items/leash.png" id="leash-img" alt="..."> Go Outside</button>
+            <button  id="gohomebtn" onclick="myFunction2()" >Return Home</button>
         </div>
     </div>
 
@@ -78,6 +79,20 @@
             href="https://www.flaticon.com/" target="_blank" title="Flaticon"> www.flaticon.com</a>
     </div>
 </footer>
-<script type="text/javascript" src='js/dogroom.js'></script>
-<script type="text/javascript" src='js/happiness.js'></script>
+<script>
+function myFunction() {
+    console.log("test");
+    document.getElementById('dog-room-background').style.backgroundImage = "url(/images/lovethisbigger.png)";
+    document.getElementById('canvas').style.backgroundImage = "url()";
+
+}
+function myFunction2() {
+    console.log("test");
+    document.getElementById('dog-room-background').style.backgroundImage = "url(/images/doghouse.jpeg)";
+    document.getElementById('canvas').style.backgroundImage = "url(/images/dogroom.jpg)";
+
+}
+</script>
+<script type="text/javascript" src='/js/dogroom.js'></script>
+<script type="text/javascript" src='/js/happiness.js'></script>
 </body>
