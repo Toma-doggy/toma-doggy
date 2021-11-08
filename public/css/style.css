@@ -12,8 +12,8 @@
 }
 /* This is for the entire body section*/
 body {
-  background-image: url("../images/wp4735682.png");
-  /* background-image: url("../images/image.png"); */
+  background-image: url("/images/wp4735682.png");
+  /* background-image: url("/images/image.png"); */
   background-repeat: no-repeat;
   background-size: cover;
   height: 1200px;
@@ -208,7 +208,7 @@ canvas {
   /* border: solid 6px #AAA; */
   border-radius: 10px;
   margin:2%;
-  background-image: url("../images/dogroom.jpg");
+  background-image: url("/images/dogroom.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -240,7 +240,7 @@ canvas {
 }
 /*this sets the background for the entire room page*/
 #dog-room-background {
-  background-image: url("../images/doghouse.jpeg");
+  background-image: url("/images/doghouse.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -267,7 +267,7 @@ canvas {
   }
 
   /* #dog-room-background {
-    background-image: url("../images/doghouse2.jpg");
+    background-image: url("/images/doghouse2.jpg");
     background-size: 135px;
     background-repeat: repeat;
     background-position: center;
@@ -278,7 +278,7 @@ canvas {
   }
 
   #dog-room-background {
-    background-image: url("../images/mobile.png");
+  background-image: url("/images/mobile.png");
   background-repeat: no-repeat;
   background-size: 375px 812px;
   background-position: center;
@@ -293,7 +293,7 @@ canvas {
   }
 
   /* #dog-room-background {
-    background-image: url("../images/doghouse2.jpg");
+    background-image: url("/images/doghouse2.jpg");
     background-size: 135px;
     background-repeat: repeat;
     background-position: center;
@@ -304,7 +304,7 @@ canvas {
   }
 
   #dog-room-background {
-    background-image: url("../images/mobile.png");
+    background-image: url("/images/mobile.png");
   background-repeat: repeat;
   background-size: cover;
   background-position: center;

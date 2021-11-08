@@ -1,3 +1,5 @@
+// coded by Marco ;)
+
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
 const width = canvas.width = 400;
@@ -23,7 +25,8 @@ pottybtn.addEventListener('click', () =>{
     console.log(currentState);
 }, .7 * 1000);
 setTimeout(function() {
-  makePoop()
+  updateHappiness();
+  makePoop();
   currentState = "happy";
   checkSource();
   console.log(currentState);
@@ -43,6 +46,7 @@ playbtn.addEventListener('click', () =>{
     currentState = "happy";
     checkSource();
     context.clearRect(260,160,30,30);
+    updateHappiness();
   }, 10 * 1000);
 });
 // give treat button actions 
@@ -53,13 +57,16 @@ treatbtn.addEventListener('click', () =>{
    makeTreat();
    setTimeout(function() {
      makeHeart();
-    context.clearRect(250,130,70,55);
+     drawChosenItems();
+     context.clearRect(250,130,70,55);
     currentState = "happy";
     checkSource();
     console.log(currentState);
   }, 5 * 1000);
   setTimeout(function() {
     context.clearRect(220,47,50,59);
+    drawChosenItems();
+    updateHappiness();
   },8 * 1000);
 });
 // feed button actions
@@ -69,21 +76,27 @@ feedbtn.addEventListener('click', () =>{
    currentState = "lick";
    checkSource();
    setTimeout(function() {
+     drawChosenItems();
+     context.clearRect(250,150,50,37);
+   },7 * 1000);
+   setTimeout(function() {
     makeHeart();
     //  references the x and y position of the dog bowl, and the height and width of the image of the dog bowl 
-    context.clearRect(250,150,50,37);
     currentState = "happy";
     checkSource();
-  }, 7 * 1000);
+  }, 7.1 * 1000);
   setTimeout(function() {
+    drawChosenItems();
     context.clearRect(220,47,50,59);
+    updateHappiness();
   },11 * 1000);
 });
 // pick up button
 const pickupbtn = document.getElementById("pickupbtn");
-pickupbtn.addEventListener('click', () =>{
-  context.clearRect(120,160,20,21);
-  context.clearRect(70,20,200,91)
+pickupbtn.addEventListener('click',async () =>{
+  await context.clearRect(120,160,20,21);
+  await context.clearRect(70,20,200,91);
+  drawChosenItems();
 });
 // dance button
 const dancebtn = document.getElementById("dancebtn");
@@ -91,12 +104,46 @@ dancebtn.addEventListener('click', ()=>{
   makeDiscoBall();
   currentState = "walk";
   checkSource();
+  setTimeout(function(){
+    currentState = "walkright";  
+    checkSource();
+  },1 * 1000);
+  setTimeout(function(){
+    currentState = "walkup";  
+    checkSource();
+  },2 * 1000);
+  setTimeout(function(){
+    currentState = "walkleft";  
+    checkSource();
+  },3 * 1000);
+  setTimeout(function(){
+    currentState = "walk";  
+    checkSource();
+  },4 * 1000);
   setTimeout(function() {
     currentState = "happy";
     checkSource();
     context.clearRect(154,0,100,110);
+    updateHappiness();
   },10 * 1000);
 });
+const inventorybtn = document.getElementById('inventorytbn');
+const gooutsidebtn = document.getElementById("gooutsidebtn");
+gooutsidebtn.addEventListener('click',()=>{
+  updateHappiness();
+  clearCanvasExceptDog();
+  currentState = 'walkright';
+  checkSource();
+  document.getElementById("inventorybtn").style.display="none"
+})
+const gohomebtn = document.getElementById("gohomebtn");
+gohomebtn.addEventListener('click',()=>{
+  drawChosenItems();
+  currentState = 'idle';
+  checkSource();
+  document.getElementById("inventorybtn").style.display="block"
+
+})
 // canvas.style.marginTop = window.innerHeight / 2 - height / 2 + "px";
 
 let currentState = "idle";
@@ -170,8 +217,7 @@ function frame() {
 
 frame();
 
-let userChosenItems = ["table"]
-let currentItem1 = userChosenItems[0];
+
 // make_item();
 function make_item()
 {
@@ -256,20 +302,159 @@ function makeDiscoBall()
     context.drawImage(item_image, itemXpos, itemYpos);
   }
 }
-// const bedbtn = document.getElementById('bedbtn');
-// bedbtn.addEventListener('click', () =>{
-// makeBed();
-// });
-// function makeBed()
-// {
-//   itemXpos = 154;
-//   itemYpos = 0;
-//   item_image = new Image();
-//   item_image.src = '/images/pet-bed (1).png';
-//   item_image.onload = function(){
-//     context.drawImage(item_image, itemXpos, itemYpos);
-//   }
-// }
+// function to check what items the user has currently chosen and can repopulate the canvas
+let userChosenItems = [];
+function drawChosenItems(){
+  setTimeout(function(){
+    if (userChosenItems.includes("art")){
+      makeArt();
+    }
+  },.01*1000);
+  setTimeout(function(){
+    if (userChosenItems.includes("bed")){
+      makeBed();
+    }
+  },.02*1000);
+  setTimeout(function(){
+    if (userChosenItems.includes("tv")){
+    makeTV();
+  }
+  },.03*1000); 
+  setTimeout(function(){
+    if (userChosenItems.includes("fishtank")){
+      makeFishTank();
+  }
+  },.04*1000); 
+  setTimeout(function(){
+    if (userChosenItems.includes("lamp")){
+      makeLamp();
+  }
+  },.05*1000); 
+  setTimeout(function(){
+    if (userChosenItems.includes("katana")){
+      makeKatana();
+  }
+  },.06*1000); 
+  }
+  
+// make bed 
+const bedbtn = document.getElementById('bedbtn');
+bedbtn.addEventListener('click', () =>{
+makeBed();
+userChosenItems.push("bed")
+});
+function makeBed()
+{
+  itemXpos = 300;
+  itemYpos = 100;
+  item_image = new Image();
+  item_image.src = '/images/Bedsmall.png';
+  item_image.onload = function(){
+    context.drawImage(item_image, itemXpos, itemYpos);
+  }
+}
+// make art 
+const artbtn = document.getElementById('artbtn');
+artbtn.addEventListener('click', () =>{
+makeArt();
+userChosenItems.push("art")
+});
+function makeArt()
+{
+  itemXpos = 50;
+  itemYpos = 50;
+  item_image = new Image();
+  item_image.src = '/images/dogagotchipaintingsmall.png';
+  item_image.onload = function(){
+    context.drawImage(item_image, itemXpos, itemYpos);
+  }
+}
+// make tv
+const tvbtn = document.getElementById('tvbtn');
+tvbtn.addEventListener('click', () =>{
+makeTV();
+userChosenItems.push("tv");
+});
+function makeTV()
+{
+  itemXpos = 30;
+  itemYpos = 140;
+  item_image = new Image();
+  item_image.src = '/images/tvsmall.png';
+  item_image.onload = function(){
+    context.drawImage(item_image, itemXpos, itemYpos);
+  }
+}
+// make fishtank
+const fishtankbtn = document.getElementById('fishtankbtn');
+fishtankbtn.addEventListener('click', () =>{
+makeFishTank();
+userChosenItems.push("fishtank");
+});
+function makeFishTank()
+{
+  itemXpos = 250;
+  itemYpos = 180;
+  item_image = new Image();
+  item_image.src = '/images/fishtanksmall.png';
+  item_image.onload = function(){
+    context.drawImage(item_image, itemXpos, itemYpos);
+  }
+}
+// make lamp
+const lampbtn = document.getElementById('lampbtn');
+lampbtn.addEventListener('click', () =>{
+makeLamp();
+userChosenItems.push("lamp");
+});
+function makeLamp()
+{
+  itemXpos = 250;
+  itemYpos = 70;
+  item_image = new Image();
+  item_image.src = '/images/lampsmall.png';
+  item_image.onload = function(){
+    context.drawImage(item_image, itemXpos, itemYpos);
+  }
+}
+// make katana
+const katanabtn = document.getElementById('katanabtn');
+katanabtn.addEventListener('click', () =>{
+makeKatana();
+userChosenItems.push("katana")
+});
+function makeKatana()
+{
+  itemXpos = 250;
+  itemYpos = 20;
+  item_image = new Image();
+  item_image.src = '/images/katanasmall.png';
+  item_image.onload = function(){
+    context.drawImage(item_image, itemXpos, itemYpos);
+  }
+}
+// function that clears the whole canvas except the dog 
+function clearCanvasExceptDog(){
+  context.clearRect(20,20,400,87);
+  context.clearRect(180,180,400,87);
+  context.clearRect(0,0,152,276);
+  context.clearRect(250,0,152,276);
+}
+// clear items button
+const clearbtn = document.getElementById('clearbtn');
+clearbtn.addEventListener('click', () =>{
+  clearCanvasExceptDog();
+  userChosenItems = [];
+});
+
+// happiness updating
+
+let defaultHappiness = 25
+const happinessbar = document.getElementById('bar-color');
+function updateHappiness(){
+  happinessbar.style.width = defaultHappiness+5+"%";
+  defaultHappiness = defaultHappiness + 5;
+}
 
 
-
+// coded by Marco ;)

@@ -1,4 +1,4 @@
-
+// Coded by Marco ;)
 const shibaAdoptForm = document.getElementById('shiba-name');
 
 shibaAdoptForm.addEventListener('submit', async (e) => {
@@ -99,3 +99,4 @@ function getUserData (){
       localStorage.setItem('breed',breed)
     });
   }
+  // coded by Marco ;)
