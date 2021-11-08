@@ -117,5 +117,4 @@ async function email(data) {
 
 }
 
-email().catch(console.error);
 module.exports = router;
